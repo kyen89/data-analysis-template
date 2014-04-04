@@ -7,9 +7,9 @@ import os
 # AUTHORSHIP AND WEBSITE INFO (Replace accordingly)
 ###################################################
 
-AUTHOR = u'Benoit Dherin'
-SITENAME = u'Data Analysis Project'
-SITESUBTITLE = u'Template using the iPython notebook'
+AUTHOR = u'Alfonso Bonilla, Keun Gang Kyen, Bill Yeh, Angela Lee, Jisu Park'
+SITENAME = u'HIV Risk Analysis'
+SITESUBTITLE = u'Comparing HIV Risk between different states in the US'
 
 ###################################################
 # FINER WEBSITE CONF (Defaults should be okay)
