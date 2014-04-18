@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>HIV Risk Analysis</title><link href="http://kyen89.github.io/project2/" rel="alternate"></link><link href="http://kyen89.github.io/project2/feeds/misc.atom.xml" rel="self"></link><id>http://kyen89.github.io/project2/</id><updated>2014-03-04T00:00:00-08:00</updated><entry><title>Project Report</title><link href="http://kyen89.github.io/project2/nb4.html" rel="alternate"></link><updated>2014-03-04T00:00:00-08:00</updated><author><name>Benoit Dherin</name></author><id>tag:kyen89.github.io,2014-03-04:project2/nb4.html</id><summary type="html">&lt;p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>HIV Risk Analysis</title><link href="http://kyen89.github.io/project2/" rel="alternate"></link><link href="http://kyen89.github.io/project2/feeds/misc.atom.xml" rel="self"></link><id>http://kyen89.github.io/project2/</id><updated>2014-03-04T00:00:00-08:00</updated><entry><title>Project Report</title><link href="http://kyen89.github.io/project2/nb4.html" rel="alternate"></link><updated>2014-03-04T00:00:00-08:00</updated><author><name>Benoit Dherin</name></author><id>tag:kyen89.github.io/project2,2014-03-04:nb4.html</id><summary type="html">&lt;p&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;In this notebook, you'll sumarize your finding for the class presentation.&lt;/p&gt;
 &lt;p&gt;The class presentation will use this notebook in slide mode, as I do during lecture time.&lt;/p&gt;
@@ -28,7 +28,7 @@ pdflatex NB4_report.tex&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;etc.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;I advise you to work at least in pairs for each project notebook, as you did for the homework assignments. Of course, all team members may participate to each notebook.&lt;/p&gt;
-&lt;/div&gt;&lt;/p&gt;</summary></entry><entry><title>Data Analysis</title><link href="http://kyen89.github.io/project2/nb3.html" rel="alternate"></link><updated>2014-03-03T00:00:00-08:00</updated><author><name>Benoit Dherin</name></author><id>tag:kyen89.github.io,2014-03-03:project2/nb3.html</id><summary type="html">&lt;p&gt;
+&lt;/div&gt;&lt;/p&gt;</summary></entry><entry><title>Data Analysis</title><link href="http://kyen89.github.io/project2/nb3.html" rel="alternate"></link><updated>2014-03-03T00:00:00-08:00</updated><author><name>Benoit Dherin</name></author><id>tag:kyen89.github.io/project2,2014-03-03:nb3.html</id><summary type="html">&lt;p&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;In this notebook, you'll perform the actual analysis of the data stored in the directory&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;./data/cleaned&lt;/code&gt;&lt;/pre&gt;
@@ -47,7 +47,7 @@ pdflatex NB4_report.tex&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;etc.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;I advise you to work at least in pairs for each project notebook, as you did for the homework assignments. Of course, all team members may participate to each notebook.&lt;/p&gt;
-&lt;/div&gt;&lt;/p&gt;</summary></entry><entry><title>Data Cleaning</title><link href="http://kyen89.github.io/project2/nb2.html" rel="alternate"></link><updated>2014-03-02T00:00:00-08:00</updated><author><name>Benoit Dherin</name></author><id>tag:kyen89.github.io,2014-03-02:project2/nb2.html</id><summary type="html">&lt;p&gt;
+&lt;/div&gt;&lt;/p&gt;</summary></entry><entry><title>Data Cleaning</title><link href="http://kyen89.github.io/project2/nb2.html" rel="alternate"></link><updated>2014-03-02T00:00:00-08:00</updated><author><name>Benoit Dherin</name></author><id>tag:kyen89.github.io/project2,2014-03-02:nb2.html</id><summary type="html">&lt;p&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;In this notebook, you'll&lt;/p&gt;
 &lt;ul&gt;
@@ -278,7 +278,7 @@ In&amp;nbsp;[]:
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;/div&gt;&lt;/p&gt;</summary></entry><entry><title>Data Gathering</title><link href="http://kyen89.github.io/project2/nb1.html" rel="alternate"></link><updated>2014-03-01T00:00:00-08:00</updated><author><name>Benoit Dherin</name></author><id>tag:kyen89.github.io,2014-03-01:project2/nb1.html</id><summary type="html">&lt;p&gt;
+&lt;/div&gt;&lt;/p&gt;</summary></entry><entry><title>Data Gathering</title><link href="http://kyen89.github.io/project2/nb1.html" rel="alternate"></link><updated>2014-03-01T00:00:00-08:00</updated><author><name>Benoit Dherin</name></author><id>tag:kyen89.github.io/project2,2014-03-01:nb1.html</id><summary type="html">&lt;p&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;In this notebook, you'll&lt;/p&gt;
 &lt;ul&gt;
@@ -345,7 +345,7 @@ In&amp;nbsp;[]:
 &lt;div class="cell border-box-sizing code_cell vbox"&gt;
 &lt;div class="input hbox"&gt;
 &lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[2]:
+In&amp;nbsp;[1]:
 &lt;/div&gt;
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="o"&gt;%%&lt;/span&gt;&lt;span class="k"&gt;bash&lt;/span&gt;
@@ -363,23 +363,14 @@ In&amp;nbsp;[2]:
 &lt;div class="hbox output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
 &lt;div class="box-flex1 output_subarea output_stream output_stdout"&gt;
 &lt;pre&gt;
-visualizations
-script
 README.md
 NB4_project_report.ipynb
 NB3_data_analysis.ipynb
 NB2_data_cleaning.ipynb
 NB1_data_gathering.ipynb
+hiv.csv
+file_name
 data
-
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class="hbox output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="box-flex1 output_subarea output_stream output_stderr"&gt;
-&lt;pre&gt;
-mkdir: cannot create directory ‘../data’: File exists
 
 &lt;/pre&gt;
 &lt;/div&gt;
@@ -399,7 +390,7 @@ mkdir: cannot create directory ‘../data’: File exists
 &lt;div class="cell border-box-sizing code_cell vbox"&gt;
 &lt;div class="input hbox"&gt;
 &lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[4]:
+In&amp;nbsp;[2]:
 &lt;/div&gt;
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="k"&gt;load_ext&lt;/span&gt; &lt;span class="n"&gt;rmagic&lt;/span&gt;
@@ -418,7 +409,7 @@ In&amp;nbsp;[4]:
 &lt;div class="cell border-box-sizing code_cell vbox"&gt;
 &lt;div class="input hbox"&gt;
 &lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[6]:
+In&amp;nbsp;[3]:
 &lt;/div&gt;
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="o"&gt;%%&lt;/span&gt;&lt;span class="k"&gt;R&lt;/span&gt;
@@ -443,28 +434,11 @@ In&amp;nbsp;[6]:
 
 
 &lt;div class="hbox output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="box-flex1 output_subarea output_display_data"&gt;
-
-
+&lt;div class="box-flex1 output_subarea output_stream output_stdout"&gt;
 &lt;pre&gt;
-
-Attaching package: ‘XML’
-
-The following object(s) are masked from ‘package:tools’:
-
-    toHTML
-
-&amp;lt;PLANT&amp;gt;
-  &amp;lt;COMMON&amp;gt;Bloodroot&amp;lt;/COMMON&amp;gt;
-  &amp;lt;BOTANICAL&amp;gt;Sanguinaria canadensis&amp;lt;/BOTANICAL&amp;gt;
-  &amp;lt;ZONE&amp;gt;4&amp;lt;/ZONE&amp;gt;
-  &amp;lt;LIGHT&amp;gt;Mostly Shady&amp;lt;/LIGHT&amp;gt;
-  &amp;lt;PRICE&amp;gt;$2.44&amp;lt;/PRICE&amp;gt;
-  &amp;lt;AVAILABILITY&amp;gt;031599&amp;lt;/AVAILABILITY&amp;gt;
-&amp;lt;/PLANT&amp;gt; 
+Error in library(XML) : there is no package called ‘XML’
 
 &lt;/pre&gt;
-
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -482,7 +456,7 @@ The following object(s) are masked from ‘package:tools’:
 &lt;div class="cell border-box-sizing code_cell vbox"&gt;
 &lt;div class="input hbox"&gt;
 &lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[7]:
+In&amp;nbsp;[4]:
 &lt;/div&gt;
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="o"&gt;%%&lt;/span&gt;&lt;span class="k"&gt;R&lt;/span&gt;
@@ -498,13 +472,11 @@ In&amp;nbsp;[7]:
 
 
 &lt;div class="hbox output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="box-flex1 output_subarea output_display_data"&gt;
-
-
+&lt;div class="box-flex1 output_subarea output_stream output_stdout"&gt;
 &lt;pre&gt;
-COMMON BOTANICAL ZONE LIGHT PRICE AVAILABILITY
-&lt;/pre&gt;
+Error in eval(expr, envir, enclos) : object &amp;apos;plant_nodes&amp;apos; not found
 
+&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -518,7 +490,7 @@ COMMON BOTANICAL ZONE LIGHT PRICE AVAILABILITY
 &lt;div class="cell border-box-sizing code_cell vbox"&gt;
 &lt;div class="input hbox"&gt;
 &lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[11]:
+In&amp;nbsp;[5]:
 &lt;/div&gt;
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="o"&gt;%%&lt;/span&gt;&lt;span class="k"&gt;R&lt;/span&gt;
@@ -539,13 +511,11 @@ In&amp;nbsp;[11]:
 
 
 &lt;div class="hbox output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="box-flex1 output_subarea output_display_data"&gt;
-
-
+&lt;div class="box-flex1 output_subarea output_stream output_stdout"&gt;
 &lt;pre&gt;
-Bloodroot Columbine Marsh Marigold Cowslip Dutchman&amp;apos;s-Breeches Ginger, Wild Hepatica Liverleaf Jack-In-The-Pulpit Mayapple Phlox, Woodland Phlox, Blue Spring-Beauty Trillium Wake Robin Violet, Dog-Tooth Trout Lily Adder&amp;apos;s-Tongue Anemone Grecian Windflower Bee Balm Bergamot Black-Eyed Susan Buttercup Crowfoot Butterfly Weed Cinquefoil Primrose Gentian Blue Gentian Jacob&amp;apos;s Ladder Greek Valerian California Poppy Shooting Star Snakeroot Cardinal Flower
-&lt;/pre&gt;
+Error in eval(expr, envir, enclos) : object &amp;apos;column_names&amp;apos; not found
 
+&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -559,7 +529,7 @@ Bloodroot Columbine Marsh Marigold Cowslip Dutchman&amp;apos;s-Breeches Ginger, 
 &lt;div class="cell border-box-sizing code_cell vbox"&gt;
 &lt;div class="input hbox"&gt;
 &lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[12]:
+In&amp;nbsp;[6]:
 &lt;/div&gt;
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="o"&gt;%%&lt;/span&gt;&lt;span class="k"&gt;R&lt;/span&gt;
@@ -576,13 +546,11 @@ In&amp;nbsp;[12]:
 
 
 &lt;div class="hbox output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="box-flex1 output_subarea output_display_data"&gt;
-
-
+&lt;div class="box-flex1 output_subarea output_stream output_stdout"&gt;
 &lt;pre&gt;
-Bloodroot Columbine Marsh Marigold Cowslip Dutchman&amp;apos;s-Breeches Ginger, Wild Hepatica Liverleaf Jack-In-The-Pulpit Mayapple Phlox, Woodland Phlox, Blue Spring-Beauty Trillium Wake Robin Violet, Dog-Tooth Trout Lily Adder&amp;apos;s-Tongue Anemone Grecian Windflower Bee Balm Bergamot Black-Eyed Susan Buttercup Crowfoot Butterfly Weed Cinquefoil Primrose Gentian Blue Gentian Jacob&amp;apos;s Ladder Greek Valerian California Poppy Shooting Star Snakeroot Cardinal Flower
-&lt;/pre&gt;
+Error in match.fun(FUN) : object &amp;apos;get_value&amp;apos; not found
 
+&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -596,7 +564,7 @@ Bloodroot Columbine Marsh Marigold Cowslip Dutchman&amp;apos;s-Breeches Ginger, 
 &lt;div class="cell border-box-sizing code_cell vbox"&gt;
 &lt;div class="input hbox"&gt;
 &lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[13]:
+In&amp;nbsp;[7]:
 &lt;/div&gt;
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="o"&gt;%%&lt;/span&gt;&lt;span class="k"&gt;R&lt;/span&gt;
@@ -615,27 +583,12 @@ In&amp;nbsp;[13]:
 
 
 &lt;div class="hbox output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="box-flex1 output_subarea output_display_data"&gt;
-
-
+&lt;div class="box-flex1 output_subarea output_stream output_stdout"&gt;
 &lt;pre&gt;
-               COMMON              BOTANICAL ZONE        LIGHT PRICE
-1           Bloodroot Sanguinaria canadensis    4 Mostly Shady $2.44
-2           Columbine   Aquilegia canadensis    3 Mostly Shady $9.37
-3      Marsh Marigold       Caltha palustris    4 Mostly Sunny $6.81
-4             Cowslip       Caltha palustris    4 Mostly Shady $9.90
-5 Dutchman&amp;apos;s-Breeches    Dicentra cucullaria    3 Mostly Shady $6.44
-6        Ginger, Wild       Asarum canadense    3 Mostly Shady $9.03
-  AVAILABILITY
-1       031599
-2       030699
-3       051799
-4       030699
-5       012099
-6       041899
+Error in lapply(column_names, get_column, plant_nodes) : 
+  object &amp;apos;column_names&amp;apos; not found
 
 &lt;/pre&gt;
-
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -649,7 +602,7 @@ In&amp;nbsp;[13]:
 &lt;div class="cell border-box-sizing code_cell vbox"&gt;
 &lt;div class="input hbox"&gt;
 &lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[14]:
+In&amp;nbsp;[8]:
 &lt;/div&gt;
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="o"&gt;%%&lt;/span&gt;&lt;span class="k"&gt;R&lt;/span&gt;
@@ -659,15 +612,47 @@ In&amp;nbsp;[14]:
 &lt;/div&gt;
 &lt;/div&gt;
 
+&lt;div class="vbox output_wrapper"&gt;
+&lt;div class="output vbox"&gt;
+
+
+&lt;div class="hbox output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="box-flex1 output_subarea output_stream output_stdout"&gt;
+&lt;pre&gt;
+Error in is.data.frame(x) : object &amp;apos;plant_df&amp;apos; not found
+
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell vbox"&gt;
 &lt;div class="input hbox"&gt;
 &lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[]:
+In&amp;nbsp;[9]:
 &lt;/div&gt;
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="o"&gt;!&lt;/span&gt;head ./data/raw/plants_to_be_cleaned.csv
 &lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="vbox output_wrapper"&gt;
+&lt;div class="output vbox"&gt;
+
+
+&lt;div class="hbox output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="box-flex1 output_subarea output_stream output_stdout"&gt;
+&lt;pre&gt;
+head: cannot open ‘./data/raw/plants_to_be_cleaned.csv’ for reading: No such file or directory
+
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
@@ -680,7 +665,7 @@ In&amp;nbsp;[]:
 &lt;div class="cell border-box-sizing code_cell vbox"&gt;
 &lt;div class="input hbox"&gt;
 &lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[15]:
+In&amp;nbsp;[10]:
 &lt;/div&gt;
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="o"&gt;%%&lt;/span&gt;&lt;span class="k"&gt;file&lt;/span&gt; &lt;span class="o"&gt;./&lt;/span&gt;&lt;span class="n"&gt;script&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;plant_df&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;R&lt;/span&gt;
@@ -709,6 +694,47 @@ In&amp;nbsp;[15]:
 
 
 &lt;div class="hbox output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="box-flex1 output_subarea output_pyerr"&gt;
+&lt;pre&gt;
+&lt;span class="ansired"&gt;---------------------------------------------------------------------------&lt;/span&gt;
+&lt;span class="ansired"&gt;IOError&lt;/span&gt;                                   Traceback (most recent call last)
+&lt;span class="ansigreen"&gt;&amp;lt;ipython-input-10-d46f650fb10e&amp;gt;&lt;/span&gt; in &lt;span class="ansicyan"&gt;&amp;lt;module&amp;gt;&lt;/span&gt;&lt;span class="ansiblue"&gt;()&lt;/span&gt;
+&lt;span class="ansigreen"&gt;----&amp;gt; 1&lt;/span&gt;&lt;span class="ansiyellow"&gt; &lt;/span&gt;get_ipython&lt;span class="ansiyellow"&gt;(&lt;/span&gt;&lt;span class="ansiyellow"&gt;)&lt;/span&gt;&lt;span class="ansiyellow"&gt;.&lt;/span&gt;run_cell_magic&lt;span class="ansiyellow"&gt;(&lt;/span&gt;&lt;span class="ansiblue"&gt;u&amp;apos;file&amp;apos;&lt;/span&gt;&lt;span class="ansiyellow"&gt;,&lt;/span&gt; &lt;span class="ansiblue"&gt;u&amp;apos;./script/plant_df-R&amp;apos;&lt;/span&gt;&lt;span class="ansiyellow"&gt;,&lt;/span&gt; &lt;span class="ansiblue"&gt;u&amp;apos;\nget_value  = function(plant_node, tag) xmlValue(plant_node[[tag]])\n    \nget_column = function(tag, plants) sapply(plants, get_value, tag)\n    \ncreate_df_from_plant_xml = function(plant_file){\n    require(XML)\n    xml_doc      = xmlParse(plant_file)\n    root_node    = xmlRoot(xml_doc)\n    plant_nodes  = xmlChildren(root_node)\n    column_names = names(plant_nodes[[1]])\n\n    data     = lapply(column_names, get_column, plant_nodes)\n    return(data.frame(data, stringsAsFactors = FALSE))\n}&amp;apos;&lt;/span&gt;&lt;span class="ansiyellow"&gt;)&lt;/span&gt;&lt;span class="ansiyellow"&gt;&lt;/span&gt;
+
+&lt;span class="ansigreen"&gt;/usr/local/lib/python2.7/dist-packages/IPython/core/interactiveshell.pyc&lt;/span&gt; in &lt;span class="ansicyan"&gt;run_cell_magic&lt;/span&gt;&lt;span class="ansiblue"&gt;(self, magic_name, line, cell)&lt;/span&gt;
+&lt;span class="ansigreen"&gt;   2127&lt;/span&gt;             magic_arg_s &lt;span class="ansiyellow"&gt;=&lt;/span&gt; self&lt;span class="ansiyellow"&gt;.&lt;/span&gt;var_expand&lt;span class="ansiyellow"&gt;(&lt;/span&gt;line&lt;span class="ansiyellow"&gt;,&lt;/span&gt; stack_depth&lt;span class="ansiyellow"&gt;)&lt;/span&gt;&lt;span class="ansiyellow"&gt;&lt;/span&gt;
+&lt;span class="ansigreen"&gt;   2128&lt;/span&gt;             &lt;span class="ansigreen"&gt;with&lt;/span&gt; self&lt;span class="ansiyellow"&gt;.&lt;/span&gt;builtin_trap&lt;span class="ansiyellow"&gt;:&lt;/span&gt;&lt;span class="ansiyellow"&gt;&lt;/span&gt;
+&lt;span class="ansigreen"&gt;-&amp;gt; 2129&lt;/span&gt;&lt;span class="ansiyellow"&gt;                 &lt;/span&gt;result &lt;span class="ansiyellow"&gt;=&lt;/span&gt; fn&lt;span class="ansiyellow"&gt;(&lt;/span&gt;magic_arg_s&lt;span class="ansiyellow"&gt;,&lt;/span&gt; cell&lt;span class="ansiyellow"&gt;)&lt;/span&gt;&lt;span class="ansiyellow"&gt;&lt;/span&gt;
+&lt;span class="ansigreen"&gt;   2130&lt;/span&gt;             &lt;span class="ansigreen"&gt;return&lt;/span&gt; result&lt;span class="ansiyellow"&gt;&lt;/span&gt;
+&lt;span class="ansigreen"&gt;   2131&lt;/span&gt; &lt;span class="ansiyellow"&gt;&lt;/span&gt;
+
+&lt;span class="ansigreen"&gt;/usr/local/lib/python2.7/dist-packages/IPython/core/magic.pyc&lt;/span&gt; in &lt;span class="ansicyan"&gt;__call__&lt;/span&gt;&lt;span class="ansiblue"&gt;(self, *args, **kwargs)&lt;/span&gt;
+&lt;span class="ansigreen"&gt;    672&lt;/span&gt;         self&lt;span class="ansiyellow"&gt;.&lt;/span&gt;_in_call &lt;span class="ansiyellow"&gt;=&lt;/span&gt; True&lt;span class="ansiyellow"&gt;&lt;/span&gt;
+&lt;span class="ansigreen"&gt;    673&lt;/span&gt;         &lt;span class="ansigreen"&gt;try&lt;/span&gt;&lt;span class="ansiyellow"&gt;:&lt;/span&gt;&lt;span class="ansiyellow"&gt;&lt;/span&gt;
+&lt;span class="ansigreen"&gt;--&amp;gt; 674&lt;/span&gt;&lt;span class="ansiyellow"&gt;             &lt;/span&gt;&lt;span class="ansigreen"&gt;return&lt;/span&gt; fn&lt;span class="ansiyellow"&gt;(&lt;/span&gt;&lt;span class="ansiyellow"&gt;*&lt;/span&gt;args&lt;span class="ansiyellow"&gt;,&lt;/span&gt; &lt;span class="ansiyellow"&gt;**&lt;/span&gt;kwargs&lt;span class="ansiyellow"&gt;)&lt;/span&gt;&lt;span class="ansiyellow"&gt;&lt;/span&gt;
+&lt;span class="ansigreen"&gt;    675&lt;/span&gt;         &lt;span class="ansigreen"&gt;finally&lt;/span&gt;&lt;span class="ansiyellow"&gt;:&lt;/span&gt;&lt;span class="ansiyellow"&gt;&lt;/span&gt;
+&lt;span class="ansigreen"&gt;    676&lt;/span&gt;             self&lt;span class="ansiyellow"&gt;.&lt;/span&gt;_in_call &lt;span class="ansiyellow"&gt;=&lt;/span&gt; False&lt;span class="ansiyellow"&gt;&lt;/span&gt;
+
+&lt;span class="ansigreen"&gt;/usr/local/lib/python2.7/dist-packages/IPython/core/magics/osm.pyc&lt;/span&gt; in &lt;span class="ansicyan"&gt;writefile&lt;/span&gt;&lt;span class="ansiblue"&gt;(self, line, cell)&lt;/span&gt;
+
+&lt;span class="ansigreen"&gt;/usr/local/lib/python2.7/dist-packages/IPython/core/magic.pyc&lt;/span&gt; in &lt;span class="ansicyan"&gt;&amp;lt;lambda&amp;gt;&lt;/span&gt;&lt;span class="ansiblue"&gt;(f, *a, **k)&lt;/span&gt;
+&lt;span class="ansigreen"&gt;    189&lt;/span&gt;     &lt;span class="ansired"&gt;# but it&amp;apos;s overkill for just that one bit of state.&lt;/span&gt;&lt;span class="ansiyellow"&gt;&lt;/span&gt;&lt;span class="ansiyellow"&gt;&lt;/span&gt;
+&lt;span class="ansigreen"&gt;    190&lt;/span&gt;     &lt;span class="ansigreen"&gt;def&lt;/span&gt; magic_deco&lt;span class="ansiyellow"&gt;(&lt;/span&gt;arg&lt;span class="ansiyellow"&gt;)&lt;/span&gt;&lt;span class="ansiyellow"&gt;:&lt;/span&gt;&lt;span class="ansiyellow"&gt;&lt;/span&gt;
+&lt;span class="ansigreen"&gt;--&amp;gt; 191&lt;/span&gt;&lt;span class="ansiyellow"&gt;         &lt;/span&gt;call &lt;span class="ansiyellow"&gt;=&lt;/span&gt; &lt;span class="ansigreen"&gt;lambda&lt;/span&gt; f&lt;span class="ansiyellow"&gt;,&lt;/span&gt; &lt;span class="ansiyellow"&gt;*&lt;/span&gt;a&lt;span class="ansiyellow"&gt;,&lt;/span&gt; &lt;span class="ansiyellow"&gt;**&lt;/span&gt;k&lt;span class="ansiyellow"&gt;:&lt;/span&gt; f&lt;span class="ansiyellow"&gt;(&lt;/span&gt;&lt;span class="ansiyellow"&gt;*&lt;/span&gt;a&lt;span class="ansiyellow"&gt;,&lt;/span&gt; &lt;span class="ansiyellow"&gt;**&lt;/span&gt;k&lt;span class="ansiyellow"&gt;)&lt;/span&gt;&lt;span class="ansiyellow"&gt;&lt;/span&gt;
+&lt;span class="ansigreen"&gt;    192&lt;/span&gt; &lt;span class="ansiyellow"&gt;&lt;/span&gt;
+&lt;span class="ansigreen"&gt;    193&lt;/span&gt;         &lt;span class="ansigreen"&gt;if&lt;/span&gt; callable&lt;span class="ansiyellow"&gt;(&lt;/span&gt;arg&lt;span class="ansiyellow"&gt;)&lt;/span&gt;&lt;span class="ansiyellow"&gt;:&lt;/span&gt;&lt;span class="ansiyellow"&gt;&lt;/span&gt;
+
+&lt;span class="ansigreen"&gt;/usr/local/lib/python2.7/dist-packages/IPython/core/magics/osm.pyc&lt;/span&gt; in &lt;span class="ansicyan"&gt;writefile&lt;/span&gt;&lt;span class="ansiblue"&gt;(self, line, cell)&lt;/span&gt;
+&lt;span class="ansigreen"&gt;    725&lt;/span&gt; &lt;span class="ansiyellow"&gt;&lt;/span&gt;
+&lt;span class="ansigreen"&gt;    726&lt;/span&gt;         mode &lt;span class="ansiyellow"&gt;=&lt;/span&gt; &lt;span class="ansiblue"&gt;&amp;apos;a&amp;apos;&lt;/span&gt; &lt;span class="ansigreen"&gt;if&lt;/span&gt; args&lt;span class="ansiyellow"&gt;.&lt;/span&gt;append &lt;span class="ansigreen"&gt;else&lt;/span&gt; &lt;span class="ansiblue"&gt;&amp;apos;w&amp;apos;&lt;/span&gt;&lt;span class="ansiyellow"&gt;&lt;/span&gt;
+&lt;span class="ansigreen"&gt;--&amp;gt; 727&lt;/span&gt;&lt;span class="ansiyellow"&gt;         &lt;/span&gt;&lt;span class="ansigreen"&gt;with&lt;/span&gt; io&lt;span class="ansiyellow"&gt;.&lt;/span&gt;open&lt;span class="ansiyellow"&gt;(&lt;/span&gt;filename&lt;span class="ansiyellow"&gt;,&lt;/span&gt; mode&lt;span class="ansiyellow"&gt;,&lt;/span&gt; encoding&lt;span class="ansiyellow"&gt;=&lt;/span&gt;&lt;span class="ansiblue"&gt;&amp;apos;utf-8&amp;apos;&lt;/span&gt;&lt;span class="ansiyellow"&gt;)&lt;/span&gt; &lt;span class="ansigreen"&gt;as&lt;/span&gt; f&lt;span class="ansiyellow"&gt;:&lt;/span&gt;&lt;span class="ansiyellow"&gt;&lt;/span&gt;
+&lt;span class="ansigreen"&gt;    728&lt;/span&gt;             f&lt;span class="ansiyellow"&gt;.&lt;/span&gt;write&lt;span class="ansiyellow"&gt;(&lt;/span&gt;cell&lt;span class="ansiyellow"&gt;)&lt;/span&gt;&lt;span class="ansiyellow"&gt;&lt;/span&gt;
+
+&lt;span class="ansired"&gt;IOError&lt;/span&gt;: [Errno 2] No such file or directory: &amp;apos;./script/plant_df-R&amp;apos;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="hbox output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
 &lt;div class="box-flex1 output_subarea output_stream output_stdout"&gt;
 &lt;pre&gt;
 Writing ./script/plant_df-R
@@ -727,7 +753,7 @@ Writing ./script/plant_df-R
 &lt;div class="cell border-box-sizing code_cell vbox"&gt;
 &lt;div class="input hbox"&gt;
 &lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[16]:
+In&amp;nbsp;[]:
 &lt;/div&gt;
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="o"&gt;%%&lt;/span&gt;&lt;span class="k"&gt;R&lt;/span&gt;
@@ -739,32 +765,271 @@ In&amp;nbsp;[16]:
 &lt;/div&gt;
 &lt;/div&gt;
 
+&lt;/div&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h1 id="Data-Collection"&gt;Data Collection&lt;a class="anchor-link" href="#Data-Collection"&gt;&amp;#182;&lt;/a&gt;&lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;div class="cell border-box-sizing code_cell vbox"&gt;
+&lt;div class="input hbox"&gt;
+&lt;div class="prompt input_prompt"&gt;
+In&amp;nbsp;[]:
+&lt;/div&gt;
+&lt;div class="input_area box-flex1"&gt;
+&lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="k"&gt;reload_ext&lt;/span&gt; &lt;span class="n"&gt;rmagic&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell vbox"&gt;
+&lt;div class="input hbox"&gt;
+&lt;div class="prompt input_prompt"&gt;
+In&amp;nbsp;[]:
+&lt;/div&gt;
+&lt;div class="input_area box-flex1"&gt;
+&lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="o"&gt;%%&lt;/span&gt;&lt;span class="k"&gt;R&lt;/span&gt;
+&lt;span class="n"&gt;data_dir&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;./data&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;raw_dir&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;paste&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;data_dir&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;/raw&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;sep&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;cleaned_dir&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;paste&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;data_dir&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;/cleaned&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;sep&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="nb"&gt;dir&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;create&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;data_dir&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nb"&gt;dir&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;create&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;raw_dir&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nb"&gt;dir&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;create&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cleaned_dir&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="Infection-Rate-Per-100000-of-Hiv-Diagnosis,-Adults-and-Adolescents"&gt;Infection Rate Per 100000 of Hiv Diagnosis, Adults and Adolescents&lt;a class="anchor-link" href="#Infection-Rate-Per-100000-of-Hiv-Diagnosis,-Adults-and-Adolescents"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;
+&lt;/div&gt;
+
+&lt;div class="cell border-box-sizing code_cell vbox"&gt;
+&lt;div class="input hbox"&gt;
+&lt;div class="prompt input_prompt"&gt;
+In&amp;nbsp;[]:
+&lt;/div&gt;
+&lt;div class="input_area box-flex1"&gt;
+&lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="n"&gt;protcol&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;http://&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;website&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;www.kff.org/&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;location&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;state-category/&amp;#39;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell vbox"&gt;
+&lt;div class="input hbox"&gt;
+&lt;div class="prompt input_prompt"&gt;
+In&amp;nbsp;[]:
+&lt;/div&gt;
+&lt;div class="input_area box-flex1"&gt;
+&lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="n"&gt;csv_key&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;estimated-rates-per-100000-of-hiv-diagnosis-adults-and-adolescents-2/#&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;csv_url&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;protcol&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;website&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;location&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;csv_key&lt;/span&gt;
+
+&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="n"&gt;csv_url&lt;/span&gt;
+
+&lt;span class="o"&gt;!&lt;/span&gt;curl &lt;span class="nv"&gt;$csv_url&lt;/span&gt; &amp;gt; &lt;span class="s1"&gt;&amp;#39;./data/raw/hiv.csv&amp;#39;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="Data-for-other-variables"&gt;Data for other variables&lt;a class="anchor-link" href="#Data-for-other-variables"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;
+&lt;/div&gt;
+
+&lt;div class="cell border-box-sizing code_cell vbox"&gt;
+&lt;div class="input hbox"&gt;
+&lt;div class="prompt input_prompt"&gt;
+In&amp;nbsp;[]:
+&lt;/div&gt;
+&lt;div class="input_area box-flex1"&gt;
+&lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="c"&gt;##Site Information&lt;/span&gt;
+&lt;span class="n"&gt;protcol&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;http://&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;website&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;www.kff.org/&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;location&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;other/state-indicator/&amp;#39;&lt;/span&gt;
+
+&lt;span class="c"&gt;#Citizenship Status&lt;/span&gt;
+&lt;span class="n"&gt;cvs_key&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;distribution-by-citizenship-status/#&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;csv_url&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;protcol&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;website&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;location&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;cvs_key&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="n"&gt;csv_url&lt;/span&gt;
+&lt;span class="o"&gt;!&lt;/span&gt;curl &lt;span class="nv"&gt;$csv_url&lt;/span&gt; &amp;gt; &lt;span class="s1"&gt;&amp;#39;./data/raw/citizenship_status.csv&amp;#39;&lt;/span&gt;
+
+&lt;span class="c"&gt;#Population distribution by the Federal Poverty Level&lt;/span&gt;
+&lt;span class="n"&gt;cvs_key&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;distribution-by-fpl/#&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;csv_url&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;protcol&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;website&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;location&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;cvs_key&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="n"&gt;csv_url&lt;/span&gt;
+&lt;span class="o"&gt;!&lt;/span&gt;curl &lt;span class="nv"&gt;$csv_url&lt;/span&gt; &amp;gt; &lt;span class="s1"&gt;&amp;#39;./data/raw/fpl.csv&amp;#39;&lt;/span&gt;
+
+&lt;span class="c"&gt;#Median Annual Income&lt;/span&gt;
+&lt;span class="n"&gt;cvs_key&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;median-annual-income/#&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;csv_url&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;protcol&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;website&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;location&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;cvs_key&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="n"&gt;csv_url&lt;/span&gt;
+&lt;span class="o"&gt;!&lt;/span&gt;curl &lt;span class="nv"&gt;$csv_url&lt;/span&gt; &amp;gt; &lt;span class="s1"&gt;&amp;#39;./data/raw/Median_Annual_Income.csv&amp;#39;&lt;/span&gt;
+
+&lt;span class="c"&gt;#Unemployment Rate&lt;/span&gt;
+&lt;span class="n"&gt;cvs_key&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;unemployment-rate/#&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;csv_url&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;protcol&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;website&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;location&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;cvs_key&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="n"&gt;csv_url&lt;/span&gt;
+&lt;span class="o"&gt;!&lt;/span&gt;curl &lt;span class="nv"&gt;$csv_url&lt;/span&gt; &amp;gt; &lt;span class="s1"&gt;&amp;#39;./data/raw/unemployment_rate.csv&amp;#39;&lt;/span&gt;
+
+&lt;span class="c"&gt;#Total Population that is Insured&lt;/span&gt;
+&lt;span class="n"&gt;cvs_key&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;total-population/#&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;csv_url&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;protcol&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;website&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;location&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;cvs_key&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="n"&gt;csv_url&lt;/span&gt;
+&lt;span class="o"&gt;!&lt;/span&gt;curl &lt;span class="nv"&gt;$csv_url&lt;/span&gt; &amp;gt; &lt;span class="s1"&gt;&amp;#39;./data/raw/Has_Insurance.csv&amp;#39;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell vbox"&gt;
+&lt;div class="input hbox"&gt;
+&lt;div class="prompt input_prompt"&gt;
+In&amp;nbsp;[12]:
+&lt;/div&gt;
+&lt;div class="input_area box-flex1"&gt;
+&lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="c"&gt;#Site Information&lt;/span&gt;
+&lt;span class="n"&gt;protcol&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;http://&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;website&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;www.kff.org/&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;location&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;state-category/&amp;#39;&lt;/span&gt;
+
+&lt;span class="c"&gt;#Hospital Ownership Type&lt;/span&gt;
+&lt;span class="n"&gt;cvs_key&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;hospitals-by-ownership/#&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;csv_url&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;protcol&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;website&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;location&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;cvs_key&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="n"&gt;csv_url&lt;/span&gt;
+&lt;span class="o"&gt;!&lt;/span&gt;curl &lt;span class="nv"&gt;$csv_url&lt;/span&gt; &amp;gt; &lt;span class="s1"&gt;&amp;#39;./data/raw/Hospital_Owners.csv&amp;#39;&lt;/span&gt;
+
+&lt;span class="c"&gt;#Federal Funding for Aids prevention&lt;/span&gt;
+&lt;span class="n"&gt;cvs_key&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;total-federal-grant-funding/#&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;csv_url&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;protcol&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;website&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;location&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;cvs_key&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="n"&gt;csv_url&lt;/span&gt;
+&lt;span class="o"&gt;!&lt;/span&gt;curl &lt;span class="nv"&gt;$csv_url&lt;/span&gt; &amp;gt; &lt;span class="s1"&gt;&amp;#39;./data/raw/Federal_Funds.csv&amp;#39;&lt;/span&gt;
+
+&lt;span class="c"&gt;#Hiv Testing Rate&lt;/span&gt;
+&lt;span class="n"&gt;cvs_key&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;hiv-testing-rate-ever-tested/#&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;csv_url&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;protcol&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;website&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;location&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;cvs_key&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="n"&gt;csv_url&lt;/span&gt;
+&lt;span class="o"&gt;!&lt;/span&gt;curl &lt;span class="nv"&gt;$csv_url&lt;/span&gt; &amp;gt; &lt;span class="s1"&gt;&amp;#39;./data/raw/Test_Rate.csv&amp;#39;&lt;/span&gt;
+
+&lt;span class="c"&gt;#Sex Ed Grades 6-8&lt;/span&gt;
+&lt;span class="n"&gt;cvs_key&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;hivstdpregnancy-education-grades-6-8/#&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;csv_url&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;protcol&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;website&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;location&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;cvs_key&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="n"&gt;csv_url&lt;/span&gt;
+&lt;span class="o"&gt;!&lt;/span&gt;curl &lt;span class="nv"&gt;$csv_url&lt;/span&gt; &amp;gt; &lt;span class="s1"&gt;&amp;#39;./data/raw/Sex_Ed_6-8.csv&amp;#39;&lt;/span&gt;
+
+&lt;span class="c"&gt;#Sex Ed Grades 9-12&lt;/span&gt;
+&lt;span class="n"&gt;cvs_key&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;hivstdpregnancy-education-grades-9-12/#&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;csv_url&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;protcol&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;website&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;location&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;cvs_key&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="n"&gt;csv_url&lt;/span&gt;
+&lt;span class="o"&gt;!&lt;/span&gt;curl &lt;span class="nv"&gt;$csv_url&lt;/span&gt; &amp;gt; &lt;span class="s1"&gt;&amp;#39;./data/raw/Sex_Ed_9-12.csv&amp;#39;&lt;/span&gt;
+
+&lt;span class="c"&gt;#Number of Reported Chlamydia Cases&lt;/span&gt;
+&lt;span class="n"&gt;cvs_key&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;chlamydia-cases/#&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;csv_url&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;protcol&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;website&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;location&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;cvs_key&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="n"&gt;csv_url&lt;/span&gt;
+&lt;span class="o"&gt;!&lt;/span&gt;curl &lt;span class="nv"&gt;$csv_url&lt;/span&gt; &amp;gt; &lt;span class="s1"&gt;&amp;#39;./data/raw/chlamydia-cases.csv&amp;#39;&lt;/span&gt;
+
+&lt;span class="c"&gt;#Number of Reported Gonorrhea Cases&lt;/span&gt;
+&lt;span class="n"&gt;cvs_key&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;gonorrhea-cases/#&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;csv_url&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;protcol&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;website&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;location&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;cvs_key&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="n"&gt;csv_url&lt;/span&gt;
+&lt;span class="o"&gt;!&lt;/span&gt;curl &lt;span class="nv"&gt;$csv_url&lt;/span&gt; &amp;gt; &lt;span class="s1"&gt;&amp;#39;./data/raw/gonorrhea-cases.csv&amp;#39;&lt;/span&gt;
+
+&lt;span class="c"&gt;#Number of Reported Syphilis Cases&lt;/span&gt;
+&lt;span class="n"&gt;cvs_key&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;syphilis-cases/#&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;csv_url&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;protcol&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;website&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;location&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;cvs_key&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="n"&gt;csv_url&lt;/span&gt;
+&lt;span class="o"&gt;!&lt;/span&gt;curl &lt;span class="nv"&gt;$csv_url&lt;/span&gt; &amp;gt; &lt;span class="s1"&gt;&amp;#39;./data/raw/syphilis-cases.csv&amp;#39;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
 &lt;div class="vbox output_wrapper"&gt;
 &lt;div class="output vbox"&gt;
 
 
 &lt;div class="hbox output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="box-flex1 output_subarea output_display_data"&gt;
-
-
+&lt;div class="box-flex1 output_subarea output_stream output_stdout"&gt;
 &lt;pre&gt;
-               COMMON              BOTANICAL ZONE        LIGHT PRICE
-1           Bloodroot Sanguinaria canadensis    4 Mostly Shady $2.44
-2           Columbine   Aquilegia canadensis    3 Mostly Shady $9.37
-3      Marsh Marigold       Caltha palustris    4 Mostly Sunny $6.81
-4             Cowslip       Caltha palustris    4 Mostly Shady $9.90
-5 Dutchman&amp;apos;s-Breeches    Dicentra cucullaria    3 Mostly Shady $6.44
-6        Ginger, Wild       Asarum canadense    3 Mostly Shady $9.03
-  AVAILABILITY
-1       031599
-2       030699
-3       051799
-4       030699
-5       012099
-6       041899
+http://www.kff.org/state-category/hospitals-by-ownership/#
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   178  100   178    0     0    654      0 --:--:-- --:--:-- --:--:--   654
+http://www.kff.org/state-category/total-federal-grant-funding/#
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   178  100   178    0     0    583      0 --:--:-- --:--:-- --:--:--   585
+http://www.kff.org/state-category/hiv-testing-rate-ever-tested/#
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   178  100   178    0     0    293      0 --:--:-- --:--:-- --:--:--   293
+http://www.kff.org/state-category/hivstdpregnancy-education-grades-6-8/#
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   178  100   178    0     0    452      0 --:--:-- --:--:-- --:--:--   452
+http://www.kff.org/state-category/hivstdpregnancy-education-grades-9-12/#
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   178  100   178    0     0    457      0 --:--:-- --:--:-- --:--:--   456
+http://www.kff.org/state-category/chlamydia-cases/#
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   178  100   178    0     0    294      0 --:--:-- --:--:-- --:--:--   294100   178  100   178    0     0    294      0 --:--:-- --:--:-- --:--:--   293
+http://www.kff.org/state-category/gonorrhea-cases/#
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   178  100   178    0     0    365      0 --:--:-- --:--:-- --:--:--   366
+http://www.kff.org/state-category/syphilis-cases/#
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   178  100   178    0     0    299      0 --:--:-- --:--:-- --:--:--   299
 
 &lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell vbox"&gt;
+&lt;div class="input hbox"&gt;
+&lt;div class="prompt input_prompt"&gt;
+In&amp;nbsp;[11]:
+&lt;/div&gt;
+&lt;div class="input_area box-flex1"&gt;
+&lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;./data/raw/syphilis-cases.csv&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="vbox output_wrapper"&gt;
+&lt;div class="output vbox"&gt;
+
+
+&lt;div class="hbox output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="box-flex1 output_subarea output_stream output_stdout"&gt;
+&lt;pre&gt;
+&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;&amp;lt;title&amp;gt;301 Moved Permanently&amp;lt;/title&amp;gt;&amp;lt;/head&amp;gt;
+&amp;lt;body bgcolor=&amp;quot;white&amp;quot;&amp;gt;
+&amp;lt;center&amp;gt;&amp;lt;h1&amp;gt;301 Moved Permanently&amp;lt;/h1&amp;gt;&amp;lt;/center&amp;gt;
+&amp;lt;hr&amp;gt;&amp;lt;center&amp;gt;nginx&amp;lt;/center&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+
+
+&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -784,6 +1049,6 @@ In&amp;nbsp;[]:
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;/div&gt;&lt;/p&gt;</summary></entry><entry><title>Reproducibility</title><link href="http://kyen89.github.io/project2/reproducibility.html" rel="alternate"></link><updated>2014-02-28T00:00:00-08:00</updated><author><name>Benoit Dherin</name></author><id>tag:kyen89.github.io,2014-02-28:project2/reproducibility.html</id><summary type="html">&lt;h1&gt;Reproducibility&lt;/h1&gt;
+&lt;/div&gt;&lt;/p&gt;</summary></entry><entry><title>Reproducibility</title><link href="http://kyen89.github.io/project2/reproducibility.html" rel="alternate"></link><updated>2014-02-28T00:00:00-08:00</updated><author><name>Benoit Dherin</name></author><id>tag:kyen89.github.io/project2,2014-02-28:reproducibility.html</id><summary type="html">&lt;h1&gt;Reproducibility&lt;/h1&gt;
 &lt;h2&gt;Virtual OskiBox&lt;/h2&gt;
 &lt;h2&gt;Software Requirements&lt;/h2&gt;</summary></entry></feed>
