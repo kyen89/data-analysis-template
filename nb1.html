@@ -1720,7 +1720,7 @@ init_mathjax();
             <meta property="og:type" content="article"/>
             <meta property="og:title" content="Data Gathering"/>
             <meta property="og:url" content="http://kyen89.github.io/project2/nb1.html"/>
-            <meta property="og:description" content="In this notebook, you'll create the directory structure for your project download the raw data for your project write functions and classes to transform raw data (e.g in XML, jason, etc.) into data frames explain what your are doing Team members responsible for this notebook: List the team ..."/>
+            <meta property="og:description" content="Data Gathering¶ In this notebook, we'll create the directory structure for our project download the raw data for our project write functions and classes to transform raw data (e.g in XML, jason, etc.) into data frames explain what we are doing Team members responsible for this notebook: team ..."/>
 
     <!-- Bootstrap -->
         <link rel="stylesheet" href="http://kyen89.github.io/project2/theme/css/bootstrap.min.css" type="text/css"/>
@@ -1815,500 +1815,36 @@ HIV Risk Analysis            </a>
                 </div>
                 <p>
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In this notebook, you'll</p>
+<h1 id="Data-Gathering">Data Gathering<a class="anchor-link" href="#Data-Gathering">&#182;</a></h1>
+</div>
+
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In this notebook, we'll</p>
 <ul>
-<li>create the directory structure for your project</li>
-<li>download the raw data for your project</li>
+<li>create the directory structure for our project</li>
+<li>download the raw data for our project</li>
 <li><strong>write functions and classes to transform raw data (e.g in XML, jason, etc.) into data frames</strong></li>
-<li>explain what your are doing</li>
+<li>explain what we are doing</li>
 </ul>
 </div>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="team-members-responsible-for-this-notebook">Team members responsible for this notebook:</h2>
-<p>List the team members contributing to this notebook, along with their responsabilities:</p>
+<h3 id="team-members-responsible-for-this-notebook">Team members responsible for this notebook:</h3>
 <ul>
 <li>team member 1 <strong>name</strong>: team member 1 <strong>responsabilities</strong></li>
 <li>team member 2 <strong>name</strong>: team member 2 <strong>responsabilities</strong></li>
-<li>etc.</li>
 </ul>
-<p>I advise you to work at least in pairs for each project notebook, as you did for the homework assignments. Of course, all team members may participate to each notebook.</p>
 </div>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="instructions">Instructions:</h2>
-<p>In <strong>markdown cells</strong>, you'll</p>
-<ul>
-<li>list and describe the data sources for your class project
-<ul>
-<li>provide the data urls</li>
-<li>describe the file formats</li>
-<li>explain the data content of each file</li>
-</ul></li>
-</ul>
-<p><strong>Remark:</strong> If your data is not directly available through the web (for instance, you requested it from a company, or got it from Inna or Henry), place you data into your personal bdrive, and provide a link to it, that you'll use in this notebook to download it into the data folder, as explained below).</p>
-<p>In <strong>code cells</strong>, you'll</p>
-<ul>
-<li><p>create the following directories:</p>
-<pre><code>./data
-./data/raw        # to store your raw data
-./data/cleaned    # to store the cleanned data
-./data/simulated  # to store simulated data
-./visualizations  # to store your plots</code></pre></li>
-<li><p>display samples of your data files (e.g. for a csv files, use data frames and the <code>head</code> method)</p></li>
-<li><p>Write <strong>scripts</strong> into the <code>./script</code> directory using the he <strong>magic command</strong></p>
-<p>%%file ./script/file_name</p></li>
-</ul>
-<p>Your scripts should contain <strong>functions</strong> and <strong>objects</strong> allowing you to</p>
-<ul>
-<li><p>download the actual raw data in the directory <code>./data/raw</code></p></li>
-<li><p>load the downloaded the raw data files into data frames</p></li>
-</ul>
-<p>This way, the functions and objects contained in your scripts will be accessible in other notebooks through the <code>import</code> command in Python (see example below).</p>
-<p><strong>Remark 1:</strong> In the code cells, you may use Python, R, or Bash, as you find more convenient.</p>
-<p><strong>Remark 2:</strong> Try to make your notebook as readable and usable (by others) as possible.</p>
-</div>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Example">Example<a class="anchor-link" href="#Example">&#182;</a></h2>
+<h2 id="Collection-of-HIV-Data">Collection of HIV Data<a class="anchor-link" href="#Collection-of-HIV-Data">&#182;</a></h2>
 </div>
 
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Here is an example of how to package your code into scripts reusable in other notebook.</p>
-<p>You'll need to do something similar to that. You'll also need to write explanations as outlined above in markdown cells.</p>
-</div>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="creating-the-directory-structure">Creating the directory structure</h3>
-</div>
-<div class="cell border-box-sizing code_cell vbox">
-<div class="input hbox">
-<div class="prompt input_prompt">
-In&nbsp;[1]:
-</div>
-<div class="input_area box-flex1">
-<div class="highlight-ipynb"><pre class="ipynb"><span class="o">%%</span><span class="k">bash</span>
-<span class="n">mkdir</span> <span class="o">../</span><span class="n">script</span> <span class="o">../</span><span class="n">data</span> <span class="o">../</span><span class="n">data</span><span class="o">/</span><span class="n">raw</span> <span class="o">../</span><span class="n">data</span><span class="o">/</span><span class="n">cleaned</span> <span class="o">../</span><span class="n">data</span><span class="o">/</span><span class="n">simulated</span> <span class="o">../</span><span class="n">visualizations</span>
-<span class="n">ls</span> <span class="o">-</span><span class="n">r</span>
-</pre></div>
-
-</div>
-</div>
-
-<div class="vbox output_wrapper">
-<div class="output vbox">
-
-
-<div class="hbox output_area"><div class="prompt"></div>
-<div class="box-flex1 output_subarea output_stream output_stdout">
-<pre>
-README.md
-NB4_project_report.ipynb
-NB3_data_analysis.ipynb
-NB2_data_cleaning.ipynb
-NB1_data_gathering.ipynb
-hiv.csv
-file_name
-data
-
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Downloading-and-displaying-raw-data">Downloading and displaying raw data<a class="anchor-link" href="#Downloading-and-displaying-raw-data">&#182;</a></h3>
-</div>
-
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>In this example, I am using R. You want to use Python instead.</p>
-</div>
-<div class="cell border-box-sizing code_cell vbox">
-<div class="input hbox">
-<div class="prompt input_prompt">
-In&nbsp;[2]:
-</div>
-<div class="input_area box-flex1">
-<div class="highlight-ipynb"><pre class="ipynb"><span class="o">%</span><span class="k">load_ext</span> <span class="n">rmagic</span>
-</pre></div>
-
-</div>
-</div>
-
-</div>
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>TO DO:</strong> list sources, display data sample, explain data content, etc.</p>
-</div>
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>We now download an XML source containing plant data, and display an typical plant entry, represented as a XML node:</p>
-</div>
-<div class="cell border-box-sizing code_cell vbox">
-<div class="input hbox">
-<div class="prompt input_prompt">
-In&nbsp;[3]:
-</div>
-<div class="input_area box-flex1">
-<div class="highlight-ipynb"><pre class="ipynb"><span class="o">%%</span><span class="k">R</span>
-<span class="n">library</span><span class="p">(</span><span class="n">XML</span><span class="p">)</span>
-<span class="n">plant_url</span>  <span class="o">=</span>  <span class="s">&#39;http://www.stat.berkeley.edu/classes/s133/data/plant_catalog.xml&#39;</span>
-<span class="n">plant_file</span> <span class="o">=</span> <span class="s">&#39;./data/raw/plant.xml&#39;</span>
-
-<span class="n">download</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="n">plant_url</span><span class="p">,</span> <span class="n">plant_file</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s">&quot;curl&quot;</span><span class="p">)</span>
-
-<span class="n">xml_doc</span>   <span class="o">=</span> <span class="n">xmlParse</span><span class="p">(</span><span class="n">plant_file</span><span class="p">)</span>
-<span class="n">root_node</span> <span class="o">=</span> <span class="n">xmlRoot</span><span class="p">(</span><span class="n">xml_doc</span><span class="p">)</span>
-
-<span class="n">plant_nodes</span> <span class="o">=</span> <span class="n">xmlChildren</span><span class="p">(</span><span class="n">root_node</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">plant_nodes</span><span class="p">[[</span><span class="mi">1</span><span class="p">]])</span>
-</pre></div>
-
-</div>
-</div>
-
-<div class="vbox output_wrapper">
-<div class="output vbox">
-
-
-<div class="hbox output_area"><div class="prompt"></div>
-<div class="box-flex1 output_subarea output_stream output_stdout">
-<pre>
-Error in library(XML) : there is no package called ‘XML’
-
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Loading-raw-data-into-data-frames">Loading raw data into data frames<a class="anchor-link" href="#Loading-raw-data-into-data-frames">&#182;</a></h3>
-</div>
-
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>The dataframe column labels are the tags of the XML nodes, contained in the plant XML nodes:</p>
+<p>We used R functions to download the data at first, the but the website generates the data dynamically with POST requests. <strong>This following section of code will download empty files, but it shows the URLs we used.</strong> We ended up downloading the CSV files manually.</p>
 </div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[4]:
-</div>
-<div class="input_area box-flex1">
-<div class="highlight-ipynb"><pre class="ipynb"><span class="o">%%</span><span class="k">R</span>
-<span class="n">column_names</span> <span class="o">=</span> <span class="n">names</span><span class="p">(</span><span class="n">plant_nodes</span><span class="p">[[</span><span class="mi">1</span><span class="p">]])</span>
-<span class="n">cat</span><span class="p">(</span><span class="n">column_names</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-
-<div class="vbox output_wrapper">
-<div class="output vbox">
-
-
-<div class="hbox output_area"><div class="prompt"></div>
-<div class="box-flex1 output_subarea output_stream output_stdout">
-<pre>
-Error in eval(expr, envir, enclos) : object &apos;plant_nodes&apos; not found
-
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Given a column name, we create a data frame column containing the column values:</p>
-</div>
-<div class="cell border-box-sizing code_cell vbox">
-<div class="input hbox">
-<div class="prompt input_prompt">
-In&nbsp;[5]:
-</div>
-<div class="input_area box-flex1">
-<div class="highlight-ipynb"><pre class="ipynb"><span class="o">%%</span><span class="k">R</span>
-<span class="n">common_tag</span> <span class="o">=</span> <span class="n">column_names</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-
-<span class="n">get_value</span> <span class="o">=</span> <span class="n">function</span><span class="p">(</span><span class="n">plant_node</span><span class="p">,</span> <span class="n">tag</span><span class="p">)</span> <span class="n">xmlValue</span><span class="p">(</span><span class="n">plant_node</span><span class="p">[[</span><span class="n">tag</span><span class="p">]])</span>
-    
-<span class="n">common_column</span> <span class="o">=</span> <span class="n">sapply</span><span class="p">(</span><span class="n">plant_nodes</span><span class="p">,</span> <span class="n">get_value</span><span class="p">,</span> <span class="n">common_tag</span><span class="p">)</span>
-    
-<span class="n">cat</span><span class="p">(</span><span class="n">common_column</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-
-<div class="vbox output_wrapper">
-<div class="output vbox">
-
-
-<div class="hbox output_area"><div class="prompt"></div>
-<div class="box-flex1 output_subarea output_stream output_stdout">
-<pre>
-Error in eval(expr, envir, enclos) : object &apos;column_names&apos; not found
-
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>We package the code above into a function that creates the data frame column corresponding from a tag name and a list of plant nodes:</p>
-</div>
-<div class="cell border-box-sizing code_cell vbox">
-<div class="input hbox">
-<div class="prompt input_prompt">
-In&nbsp;[6]:
-</div>
-<div class="input_area box-flex1">
-<div class="highlight-ipynb"><pre class="ipynb"><span class="o">%%</span><span class="k">R</span>
-<span class="n">get_column</span> <span class="o">=</span> <span class="n">function</span><span class="p">(</span><span class="n">tag</span><span class="p">,</span> <span class="n">plants</span><span class="p">)</span> <span class="n">sapply</span><span class="p">(</span><span class="n">plants</span><span class="p">,</span> <span class="n">get_value</span><span class="p">,</span> <span class="n">tag</span><span class="p">)</span>
-    
-<span class="n">cat</span><span class="p">((</span><span class="n">get_column</span><span class="p">(</span><span class="s">&#39;COMMON&#39;</span><span class="p">,</span> <span class="n">plant_nodes</span><span class="p">)))</span>
-</pre></div>
-
-</div>
-</div>
-
-<div class="vbox output_wrapper">
-<div class="output vbox">
-
-
-<div class="hbox output_area"><div class="prompt"></div>
-<div class="box-flex1 output_subarea output_stream output_stdout">
-<pre>
-Error in match.fun(FUN) : object &apos;get_value&apos; not found
-
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>We are now ready to retrieve all the columns of our data frame into a list of vectors, which we will use to construct our data frame:</p>
-</div>
-<div class="cell border-box-sizing code_cell vbox">
-<div class="input hbox">
-<div class="prompt input_prompt">
-In&nbsp;[7]:
-</div>
-<div class="input_area box-flex1">
-<div class="highlight-ipynb"><pre class="ipynb"><span class="o">%%</span><span class="k">R</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">lapply</span><span class="p">(</span><span class="n">column_names</span><span class="p">,</span> <span class="n">get_column</span><span class="p">,</span> <span class="n">plant_nodes</span><span class="p">)</span>
-
-<span class="n">plant_df</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">frame</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">stringsAsFactors</span> <span class="o">=</span> <span class="n">FALSE</span><span class="p">)</span>
-
-<span class="k">print</span><span class="p">(</span><span class="n">head</span><span class="p">(</span><span class="n">plant_df</span><span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-
-<div class="vbox output_wrapper">
-<div class="output vbox">
-
-
-<div class="hbox output_area"><div class="prompt"></div>
-<div class="box-flex1 output_subarea output_stream output_stdout">
-<pre>
-Error in lapply(column_names, get_column, plant_nodes) : 
-  object &apos;column_names&apos; not found
-
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Using the data frame we just created, we save the plant data into a csv file into the raw data directory:</p>
-</div>
-<div class="cell border-box-sizing code_cell vbox">
-<div class="input hbox">
-<div class="prompt input_prompt">
-In&nbsp;[8]:
-</div>
-<div class="input_area box-flex1">
-<div class="highlight-ipynb"><pre class="ipynb"><span class="o">%%</span><span class="k">R</span>
-<span class="n">write</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="n">plant_df</span><span class="p">,</span> <span class="s">&#39;./data/raw/plants_to_be_cleaned.csv&#39;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-
-<div class="vbox output_wrapper">
-<div class="output vbox">
-
-
-<div class="hbox output_area"><div class="prompt"></div>
-<div class="box-flex1 output_subarea output_stream output_stdout">
-<pre>
-Error in is.data.frame(x) : object &apos;plant_df&apos; not found
-
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell vbox">
-<div class="input hbox">
-<div class="prompt input_prompt">
-In&nbsp;[9]:
-</div>
-<div class="input_area box-flex1">
-<div class="highlight-ipynb"><pre class="ipynb"><span class="o">!</span>head ./data/raw/plants_to_be_cleaned.csv
-</pre></div>
-
-</div>
-</div>
-
-<div class="vbox output_wrapper">
-<div class="output vbox">
-
-
-<div class="hbox output_area"><div class="prompt"></div>
-<div class="box-flex1 output_subarea output_stream output_stdout">
-<pre>
-head: cannot open ‘./data/raw/plants_to_be_cleaned.csv’ for reading: No such file or directory
-
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Packaging-the-gathering-code-into-reusable-functions">Packaging the gathering code into reusable functions<a class="anchor-link" href="#Packaging-the-gathering-code-into-reusable-functions">&#182;</a></h3>
-</div>
-
-<div class="cell border-box-sizing code_cell vbox">
-<div class="input hbox">
-<div class="prompt input_prompt">
-In&nbsp;[10]:
-</div>
-<div class="input_area box-flex1">
-<div class="highlight-ipynb"><pre class="ipynb"><span class="o">%%</span><span class="k">file</span> <span class="o">./</span><span class="n">script</span><span class="o">/</span><span class="n">plant_df</span><span class="o">-</span><span class="n">R</span>
-
-<span class="n">get_value</span>  <span class="o">=</span> <span class="n">function</span><span class="p">(</span><span class="n">plant_node</span><span class="p">,</span> <span class="n">tag</span><span class="p">)</span> <span class="n">xmlValue</span><span class="p">(</span><span class="n">plant_node</span><span class="p">[[</span><span class="n">tag</span><span class="p">]])</span>
-    
-<span class="n">get_column</span> <span class="o">=</span> <span class="n">function</span><span class="p">(</span><span class="n">tag</span><span class="p">,</span> <span class="n">plants</span><span class="p">)</span> <span class="n">sapply</span><span class="p">(</span><span class="n">plants</span><span class="p">,</span> <span class="n">get_value</span><span class="p">,</span> <span class="n">tag</span><span class="p">)</span>
-    
-<span class="n">create_df_from_plant_xml</span> <span class="o">=</span> <span class="n">function</span><span class="p">(</span><span class="n">plant_file</span><span class="p">){</span>
-    <span class="n">require</span><span class="p">(</span><span class="n">XML</span><span class="p">)</span>
-    <span class="n">xml_doc</span>      <span class="o">=</span> <span class="n">xmlParse</span><span class="p">(</span><span class="n">plant_file</span><span class="p">)</span>
-    <span class="n">root_node</span>    <span class="o">=</span> <span class="n">xmlRoot</span><span class="p">(</span><span class="n">xml_doc</span><span class="p">)</span>
-    <span class="n">plant_nodes</span>  <span class="o">=</span> <span class="n">xmlChildren</span><span class="p">(</span><span class="n">root_node</span><span class="p">)</span>
-    <span class="n">column_names</span> <span class="o">=</span> <span class="n">names</span><span class="p">(</span><span class="n">plant_nodes</span><span class="p">[[</span><span class="mi">1</span><span class="p">]])</span>
-
-    <span class="n">data</span>     <span class="o">=</span> <span class="n">lapply</span><span class="p">(</span><span class="n">column_names</span><span class="p">,</span> <span class="n">get_column</span><span class="p">,</span> <span class="n">plant_nodes</span><span class="p">)</span>
-    <span class="k">return</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">frame</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">stringsAsFactors</span> <span class="o">=</span> <span class="n">FALSE</span><span class="p">))</span>
-<span class="p">}</span>
-</pre></div>
-
-</div>
-</div>
-
-<div class="vbox output_wrapper">
-<div class="output vbox">
-
-
-<div class="hbox output_area"><div class="prompt"></div>
-<div class="box-flex1 output_subarea output_pyerr">
-<pre>
-<span class="ansired">---------------------------------------------------------------------------</span>
-<span class="ansired">IOError</span>                                   Traceback (most recent call last)
-<span class="ansigreen">&lt;ipython-input-10-d46f650fb10e&gt;</span> in <span class="ansicyan">&lt;module&gt;</span><span class="ansiblue">()</span>
-<span class="ansigreen">----&gt; 1</span><span class="ansiyellow"> </span>get_ipython<span class="ansiyellow">(</span><span class="ansiyellow">)</span><span class="ansiyellow">.</span>run_cell_magic<span class="ansiyellow">(</span><span class="ansiblue">u&apos;file&apos;</span><span class="ansiyellow">,</span> <span class="ansiblue">u&apos;./script/plant_df-R&apos;</span><span class="ansiyellow">,</span> <span class="ansiblue">u&apos;\nget_value  = function(plant_node, tag) xmlValue(plant_node[[tag]])\n    \nget_column = function(tag, plants) sapply(plants, get_value, tag)\n    \ncreate_df_from_plant_xml = function(plant_file){\n    require(XML)\n    xml_doc      = xmlParse(plant_file)\n    root_node    = xmlRoot(xml_doc)\n    plant_nodes  = xmlChildren(root_node)\n    column_names = names(plant_nodes[[1]])\n\n    data     = lapply(column_names, get_column, plant_nodes)\n    return(data.frame(data, stringsAsFactors = FALSE))\n}&apos;</span><span class="ansiyellow">)</span><span class="ansiyellow"></span>
-
-<span class="ansigreen">/usr/local/lib/python2.7/dist-packages/IPython/core/interactiveshell.pyc</span> in <span class="ansicyan">run_cell_magic</span><span class="ansiblue">(self, magic_name, line, cell)</span>
-<span class="ansigreen">   2127</span>             magic_arg_s <span class="ansiyellow">=</span> self<span class="ansiyellow">.</span>var_expand<span class="ansiyellow">(</span>line<span class="ansiyellow">,</span> stack_depth<span class="ansiyellow">)</span><span class="ansiyellow"></span>
-<span class="ansigreen">   2128</span>             <span class="ansigreen">with</span> self<span class="ansiyellow">.</span>builtin_trap<span class="ansiyellow">:</span><span class="ansiyellow"></span>
-<span class="ansigreen">-&gt; 2129</span><span class="ansiyellow">                 </span>result <span class="ansiyellow">=</span> fn<span class="ansiyellow">(</span>magic_arg_s<span class="ansiyellow">,</span> cell<span class="ansiyellow">)</span><span class="ansiyellow"></span>
-<span class="ansigreen">   2130</span>             <span class="ansigreen">return</span> result<span class="ansiyellow"></span>
-<span class="ansigreen">   2131</span> <span class="ansiyellow"></span>
-
-<span class="ansigreen">/usr/local/lib/python2.7/dist-packages/IPython/core/magic.pyc</span> in <span class="ansicyan">__call__</span><span class="ansiblue">(self, *args, **kwargs)</span>
-<span class="ansigreen">    672</span>         self<span class="ansiyellow">.</span>_in_call <span class="ansiyellow">=</span> True<span class="ansiyellow"></span>
-<span class="ansigreen">    673</span>         <span class="ansigreen">try</span><span class="ansiyellow">:</span><span class="ansiyellow"></span>
-<span class="ansigreen">--&gt; 674</span><span class="ansiyellow">             </span><span class="ansigreen">return</span> fn<span class="ansiyellow">(</span><span class="ansiyellow">*</span>args<span class="ansiyellow">,</span> <span class="ansiyellow">**</span>kwargs<span class="ansiyellow">)</span><span class="ansiyellow"></span>
-<span class="ansigreen">    675</span>         <span class="ansigreen">finally</span><span class="ansiyellow">:</span><span class="ansiyellow"></span>
-<span class="ansigreen">    676</span>             self<span class="ansiyellow">.</span>_in_call <span class="ansiyellow">=</span> False<span class="ansiyellow"></span>
-
-<span class="ansigreen">/usr/local/lib/python2.7/dist-packages/IPython/core/magics/osm.pyc</span> in <span class="ansicyan">writefile</span><span class="ansiblue">(self, line, cell)</span>
-
-<span class="ansigreen">/usr/local/lib/python2.7/dist-packages/IPython/core/magic.pyc</span> in <span class="ansicyan">&lt;lambda&gt;</span><span class="ansiblue">(f, *a, **k)</span>
-<span class="ansigreen">    189</span>     <span class="ansired"># but it&apos;s overkill for just that one bit of state.</span><span class="ansiyellow"></span><span class="ansiyellow"></span>
-<span class="ansigreen">    190</span>     <span class="ansigreen">def</span> magic_deco<span class="ansiyellow">(</span>arg<span class="ansiyellow">)</span><span class="ansiyellow">:</span><span class="ansiyellow"></span>
-<span class="ansigreen">--&gt; 191</span><span class="ansiyellow">         </span>call <span class="ansiyellow">=</span> <span class="ansigreen">lambda</span> f<span class="ansiyellow">,</span> <span class="ansiyellow">*</span>a<span class="ansiyellow">,</span> <span class="ansiyellow">**</span>k<span class="ansiyellow">:</span> f<span class="ansiyellow">(</span><span class="ansiyellow">*</span>a<span class="ansiyellow">,</span> <span class="ansiyellow">**</span>k<span class="ansiyellow">)</span><span class="ansiyellow"></span>
-<span class="ansigreen">    192</span> <span class="ansiyellow"></span>
-<span class="ansigreen">    193</span>         <span class="ansigreen">if</span> callable<span class="ansiyellow">(</span>arg<span class="ansiyellow">)</span><span class="ansiyellow">:</span><span class="ansiyellow"></span>
-
-<span class="ansigreen">/usr/local/lib/python2.7/dist-packages/IPython/core/magics/osm.pyc</span> in <span class="ansicyan">writefile</span><span class="ansiblue">(self, line, cell)</span>
-<span class="ansigreen">    725</span> <span class="ansiyellow"></span>
-<span class="ansigreen">    726</span>         mode <span class="ansiyellow">=</span> <span class="ansiblue">&apos;a&apos;</span> <span class="ansigreen">if</span> args<span class="ansiyellow">.</span>append <span class="ansigreen">else</span> <span class="ansiblue">&apos;w&apos;</span><span class="ansiyellow"></span>
-<span class="ansigreen">--&gt; 727</span><span class="ansiyellow">         </span><span class="ansigreen">with</span> io<span class="ansiyellow">.</span>open<span class="ansiyellow">(</span>filename<span class="ansiyellow">,</span> mode<span class="ansiyellow">,</span> encoding<span class="ansiyellow">=</span><span class="ansiblue">&apos;utf-8&apos;</span><span class="ansiyellow">)</span> <span class="ansigreen">as</span> f<span class="ansiyellow">:</span><span class="ansiyellow"></span>
-<span class="ansigreen">    728</span>             f<span class="ansiyellow">.</span>write<span class="ansiyellow">(</span>cell<span class="ansiyellow">)</span><span class="ansiyellow"></span>
-
-<span class="ansired">IOError</span>: [Errno 2] No such file or directory: &apos;./script/plant_df-R&apos;</pre>
-</div>
-</div>
-
-<div class="hbox output_area"><div class="prompt"></div>
-<div class="box-flex1 output_subarea output_stream output_stdout">
-<pre>
-Writing ./script/plant_df-R
-
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Now, our function converting a raw plant XML file into a R data frame can be used in other notebooks, using the <code>source</code> command:</p>
-</div>
-<div class="cell border-box-sizing code_cell vbox">
-<div class="input hbox">
-<div class="prompt input_prompt">
-In&nbsp;[]:
-</div>
-<div class="input_area box-flex1">
-<div class="highlight-ipynb"><pre class="ipynb"><span class="o">%%</span><span class="k">R</span>
-<span class="n">source</span><span class="p">(</span><span class="s">&#39;./script/plant_df-R&#39;</span><span class="p">)</span>
-
-<span class="k">print</span><span class="p">(</span><span class="n">head</span><span class="p">(</span><span class="n">create_df_from_plant_xml</span><span class="p">(</span><span class="n">plant_file</span><span class="p">)))</span>
-</pre></div>
-
-</div>
-</div>
-
-</div>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Data-Collection">Data Collection<a class="anchor-link" href="#Data-Collection">&#182;</a></h1>
-</div>
-
-<div class="cell border-box-sizing code_cell vbox">
-<div class="input hbox">
-<div class="prompt input_prompt">
-In&nbsp;[]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="o">%</span><span class="k">reload_ext</span> <span class="n">rmagic</span>
@@ -2321,7 +1857,7 @@ In&nbsp;[]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[]:
+In&nbsp;[5]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="o">%%</span><span class="k">R</span>
@@ -2339,9 +1875,8 @@ In&nbsp;[]:
 
 </div>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Infection-Rate-Per-100000-of-Hiv-Diagnosis,-Adults-and-Adolescents">Infection Rate Per 100000 of Hiv Diagnosis, Adults and Adolescents<a class="anchor-link" href="#Infection-Rate-Per-100000-of-Hiv-Diagnosis,-Adults-and-Adolescents">&#182;</a></h2>
+<p>First, we gathered data for the infection rate per 100000 of HIV diagnosis, adults and adolescents.</p>
 </div>
-
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
@@ -2351,23 +1886,10 @@ In&nbsp;[]:
 <div class="highlight-ipynb"><pre class="ipynb"><span class="n">protcol</span> <span class="o">=</span> <span class="s">&#39;http://&#39;</span>
 <span class="n">website</span> <span class="o">=</span> <span class="s">&#39;www.kff.org/&#39;</span>
 <span class="n">location</span> <span class="o">=</span> <span class="s">&#39;state-category/&#39;</span>
-</pre></div>
 
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell vbox">
-<div class="input hbox">
-<div class="prompt input_prompt">
-In&nbsp;[]:
-</div>
-<div class="input_area box-flex1">
-<div class="highlight-ipynb"><pre class="ipynb"><span class="n">csv_key</span> <span class="o">=</span> <span class="s">&#39;estimated-rates-per-100000-of-hiv-diagnosis-adults-and-adolescents-2/#&#39;</span>
+<span class="n">csv_key</span> <span class="o">=</span> <span class="s">&#39;estimated-rates-per-100000-of-hiv-diagnosis-adults-and-adolescents-2/#&#39;</span>
 <span class="n">csv_url</span> <span class="o">=</span> <span class="n">protcol</span> <span class="o">+</span> <span class="n">website</span> <span class="o">+</span> <span class="n">location</span> <span class="o">+</span> <span class="n">csv_key</span>
-
 <span class="k">print</span> <span class="n">csv_url</span>
-
 <span class="o">!</span>curl <span class="nv">$csv_url</span> &gt; <span class="s1">&#39;./data/raw/hiv.csv&#39;</span>
 </pre></div>
 
@@ -2376,9 +1898,8 @@ In&nbsp;[]:
 
 </div>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Data-for-other-variables">Data for other variables<a class="anchor-link" href="#Data-for-other-variables">&#182;</a></h2>
+<p>Supplementary data was available at another URL.</p>
 </div>
-
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
@@ -2419,19 +1940,8 @@ In&nbsp;[]:
 <span class="n">csv_url</span> <span class="o">=</span> <span class="n">protcol</span> <span class="o">+</span> <span class="n">website</span> <span class="o">+</span> <span class="n">location</span> <span class="o">+</span> <span class="n">cvs_key</span>
 <span class="k">print</span> <span class="n">csv_url</span>
 <span class="o">!</span>curl <span class="nv">$csv_url</span> &gt; <span class="s1">&#39;./data/raw/Has_Insurance.csv&#39;</span>
-</pre></div>
 
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell vbox">
-<div class="input hbox">
-<div class="prompt input_prompt">
-In&nbsp;[12]:
-</div>
-<div class="input_area box-flex1">
-<div class="highlight-ipynb"><pre class="ipynb"><span class="c">#Site Information</span>
+<span class="c">#Site Information</span>
 <span class="n">protcol</span> <span class="o">=</span> <span class="s">&#39;http://&#39;</span>
 <span class="n">website</span> <span class="o">=</span> <span class="s">&#39;www.kff.org/&#39;</span>
 <span class="n">location</span> <span class="o">=</span> <span class="s">&#39;state-category/&#39;</span>
@@ -2488,61 +1998,161 @@ In&nbsp;[12]:
 </div>
 </div>
 
-<div class="vbox output_wrapper">
-<div class="output vbox">
-
-
-<div class="hbox output_area"><div class="prompt"></div>
-<div class="box-flex1 output_subarea output_stream output_stdout">
-<pre>
-http://www.kff.org/state-category/hospitals-by-ownership/#
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   178  100   178    0     0    654      0 --:--:-- --:--:-- --:--:--   654
-http://www.kff.org/state-category/total-federal-grant-funding/#
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   178  100   178    0     0    583      0 --:--:-- --:--:-- --:--:--   585
-http://www.kff.org/state-category/hiv-testing-rate-ever-tested/#
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   178  100   178    0     0    293      0 --:--:-- --:--:-- --:--:--   293
-http://www.kff.org/state-category/hivstdpregnancy-education-grades-6-8/#
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   178  100   178    0     0    452      0 --:--:-- --:--:-- --:--:--   452
-http://www.kff.org/state-category/hivstdpregnancy-education-grades-9-12/#
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   178  100   178    0     0    457      0 --:--:-- --:--:-- --:--:--   456
-http://www.kff.org/state-category/chlamydia-cases/#
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   178  100   178    0     0    294      0 --:--:-- --:--:-- --:--:--   294100   178  100   178    0     0    294      0 --:--:-- --:--:-- --:--:--   293
-http://www.kff.org/state-category/gonorrhea-cases/#
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   178  100   178    0     0    365      0 --:--:-- --:--:-- --:--:--   366
-http://www.kff.org/state-category/syphilis-cases/#
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   178  100   178    0     0    299      0 --:--:-- --:--:-- --:--:--   299
-
-</pre>
 </div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Loading-the-HIV-Data">Loading the HIV Data<a class="anchor-link" href="#Loading-the-HIV-Data">&#182;</a></h2>
 </div>
 
-</div>
-</div>
-
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In this step, we define a script to be reused that will load each of the CSV files into data frames. Each one is treated separately because loading each one is different.</p>
 </div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[11]:
+In&nbsp;[2]:
 </div>
 <div class="input_area box-flex1">
-<div class="highlight-ipynb"><pre class="ipynb"><span class="k">print</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s">&#39;./data/raw/syphilis-cases.csv&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+<div class="highlight-ipynb"><pre class="ipynb"><span class="o">%%</span><span class="k">file</span> <span class="o">./</span><span class="n">scripts</span><span class="o">/</span><span class="n">hiv_loader</span><span class="o">.</span><span class="n">R</span>
+
+<span class="n">get_hiv_diagnoses_df</span> <span class="o">=</span> <span class="n">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">HIV_Diagnoses</span> <span class="o">=</span> <span class="n">read</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="s">&#39;./data/raw/HIV_Diagnoses.csv&#39;</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="n">F</span><span class="p">)</span>
+    <span class="n">col_name_HIV</span> <span class="o">=</span> <span class="n">HIV_Diagnoses</span><span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+    <span class="n">loaded</span><span class="o">.</span><span class="n">HIV_Diagnoses</span> <span class="o">=</span> <span class="p">(</span><span class="n">HIV_Diagnoses</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="mi">60</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span>
+    <span class="n">names</span><span class="p">(</span><span class="n">loaded</span><span class="o">.</span><span class="n">HIV_Diagnoses</span><span class="p">)</span> <span class="o">=</span> <span class="n">unlist</span><span class="p">(</span><span class="n">col_name_HIV</span><span class="p">)</span>
+    <span class="n">row</span><span class="o">.</span><span class="n">names</span><span class="p">(</span><span class="n">loaded</span><span class="o">.</span><span class="n">HIV_Diagnoses</span><span class="p">)</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span><span class="n">nrow</span><span class="p">(</span><span class="n">loaded</span><span class="o">.</span><span class="n">HIV_Diagnoses</span><span class="p">)</span>
+    
+    <span class="k">return</span><span class="p">(</span><span class="n">loaded</span><span class="o">.</span><span class="n">HIV_Diagnoses</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="n">get_citizenship_status_df</span> <span class="o">=</span> <span class="n">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">Citizenship_Status</span> <span class="o">=</span> <span class="n">read</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="s">&#39;./data/raw/Citizenship_Status.csv&#39;</span><span class="p">,</span><span class="n">header</span> <span class="o">=</span> <span class="n">F</span><span class="p">)</span>
+    <span class="n">col_names_citizen</span> <span class="o">=</span> <span class="n">Citizenship_Status</span><span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
+    <span class="n">loaded</span><span class="o">.</span><span class="n">Citizenship_Status</span> <span class="o">=</span> <span class="p">(</span><span class="n">Citizenship_Status</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="mi">55</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">])</span>
+    <span class="n">names</span><span class="p">(</span><span class="n">loaded</span><span class="o">.</span><span class="n">Citizenship_Status</span><span class="p">)</span> <span class="o">=</span> <span class="n">unlist</span><span class="p">(</span><span class="n">col_names_citizen</span><span class="p">)</span>
+    <span class="n">row</span><span class="o">.</span><span class="n">names</span><span class="p">(</span><span class="n">loaded</span><span class="o">.</span><span class="n">Citizenship_Status</span><span class="p">)</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span><span class="n">nrow</span><span class="p">(</span><span class="n">loaded</span><span class="o">.</span><span class="n">Citizenship_Status</span><span class="p">)</span>
+    
+    <span class="k">return</span><span class="p">(</span><span class="n">loaded</span><span class="o">.</span><span class="n">Citizenship_Status</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="n">get_fpl_df</span> <span class="o">=</span> <span class="n">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">fpl</span> <span class="o">=</span> <span class="n">read</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="s">&#39;./data/raw/fpl.csv&#39;</span><span class="p">,</span><span class="n">header</span> <span class="o">=</span> <span class="n">F</span><span class="p">)</span>
+    <span class="n">col_name_fpl</span> <span class="o">=</span> <span class="n">fpl</span><span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="mi">7</span><span class="p">]</span>
+    <span class="n">loaded</span><span class="o">.</span><span class="n">fpl</span> <span class="o">=</span> <span class="p">(</span><span class="n">fpl</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="mi">56</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="mi">7</span><span class="p">])</span>
+    <span class="n">names</span><span class="p">(</span><span class="n">loaded</span><span class="o">.</span><span class="n">fpl</span><span class="p">)</span> <span class="o">=</span> <span class="n">unlist</span><span class="p">(</span><span class="n">col_name_fpl</span><span class="p">)</span>
+    <span class="n">row</span><span class="o">.</span><span class="n">names</span><span class="p">(</span><span class="n">loaded</span><span class="o">.</span><span class="n">fpl</span><span class="p">)</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span><span class="n">nrow</span><span class="p">(</span><span class="n">loaded</span><span class="o">.</span><span class="n">fpl</span><span class="p">)</span>
+    
+    <span class="k">return</span><span class="p">(</span><span class="n">loaded</span><span class="o">.</span><span class="n">fpl</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="n">get_income_df</span> <span class="o">=</span> <span class="n">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">Median_Annual_Income</span> <span class="o">=</span> <span class="n">read</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="s">&#39;./data/raw/Median_Annual_Income.csv&#39;</span><span class="p">,</span><span class="n">header</span> <span class="o">=</span> <span class="n">F</span><span class="p">)</span>
+    <span class="n">col_name_medIncome</span> <span class="o">=</span> <span class="n">Median_Annual_Income</span><span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+    <span class="n">loaded</span><span class="o">.</span><span class="n">Median_Annual_Income</span> <span class="o">=</span> <span class="p">(</span><span class="n">Median_Annual_Income</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="mi">56</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span>
+    <span class="n">names</span><span class="p">(</span><span class="n">loaded</span><span class="o">.</span><span class="n">Median_Annual_Income</span><span class="p">)</span> <span class="o">=</span> <span class="n">unlist</span><span class="p">(</span><span class="n">col_name_medIncome</span><span class="p">)</span>
+    <span class="n">row</span><span class="o">.</span><span class="n">names</span><span class="p">(</span><span class="n">loaded</span><span class="o">.</span><span class="n">Median_Annual_Income</span><span class="p">)</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span><span class="n">nrow</span><span class="p">(</span><span class="n">loaded</span><span class="o">.</span><span class="n">Median_Annual_Income</span><span class="p">)</span>
+    
+    <span class="k">return</span><span class="p">(</span><span class="n">loaded</span><span class="o">.</span><span class="n">Median_Annual_Income</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="n">get_unemployment_df</span> <span class="o">=</span> <span class="n">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">unemployment_rate</span> <span class="o">=</span> <span class="n">read</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="s">&#39;./data/raw/unemployment_rate.csv&#39;</span><span class="p">,</span><span class="n">header</span> <span class="o">=</span> <span class="n">F</span><span class="p">)</span>
+    <span class="n">col_name_unempRate</span> <span class="o">=</span> <span class="n">unemployment_rate</span><span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+    <span class="n">loaded</span><span class="o">.</span><span class="n">unemployment_rate</span> <span class="o">=</span> <span class="p">(</span><span class="n">unemployment_rate</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="mi">57</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span>
+    <span class="n">names</span><span class="p">(</span><span class="n">loaded</span><span class="o">.</span><span class="n">unemployment_rate</span><span class="p">)</span> <span class="o">=</span> <span class="n">unlist</span><span class="p">(</span><span class="n">col_name_unempRate</span><span class="p">)</span>
+    <span class="n">row</span><span class="o">.</span><span class="n">names</span><span class="p">(</span><span class="n">loaded</span><span class="o">.</span><span class="n">unemployment_rate</span><span class="p">)</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span><span class="n">nrow</span><span class="p">(</span><span class="n">loaded</span><span class="o">.</span><span class="n">unemployment_rate</span><span class="p">)</span>     
+
+    <span class="k">return</span><span class="p">(</span><span class="n">loaded</span><span class="o">.</span><span class="n">unemployment_rate</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="n">get_insured_df</span> <span class="o">=</span> <span class="n">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">pop_insured</span> <span class="o">=</span> <span class="n">read</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="s">&#39;./data/raw/Has_Insurance.csv&#39;</span><span class="p">,</span><span class="n">header</span> <span class="o">=</span> <span class="n">F</span><span class="p">)</span>
+    <span class="n">col_name_insured</span> <span class="o">=</span> <span class="n">pop_insured</span><span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="mi">8</span><span class="p">]</span>
+    <span class="n">loaded</span><span class="o">.</span><span class="n">pop_insured</span> <span class="o">=</span> <span class="p">(</span><span class="n">pop_insured</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="mi">56</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="mi">8</span><span class="p">])</span>
+    <span class="n">names</span><span class="p">(</span><span class="n">loaded</span><span class="o">.</span><span class="n">pop_insured</span><span class="p">)</span> <span class="o">=</span> <span class="n">unlist</span><span class="p">(</span><span class="n">col_name_insured</span><span class="p">)</span>
+    <span class="n">row</span><span class="o">.</span><span class="n">names</span><span class="p">(</span><span class="n">loaded</span><span class="o">.</span><span class="n">pop_insured</span><span class="p">)</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span><span class="n">nrow</span><span class="p">(</span><span class="n">loaded</span><span class="o">.</span><span class="n">pop_insured</span><span class="p">)</span>
+    
+    <span class="k">return</span><span class="p">(</span><span class="n">loaded</span><span class="o">.</span><span class="n">pop_insured</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="n">get_hospital_df</span> <span class="o">=</span> <span class="n">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">Hospital_Owners</span> <span class="o">=</span> <span class="n">read</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="s">&#39;./data/raw/Hospital_Owners.csv&#39;</span><span class="p">,</span><span class="n">header</span> <span class="o">=</span> <span class="n">F</span><span class="p">)</span>
+    <span class="n">col_name_HospOwners</span> <span class="o">=</span> <span class="n">Hospital_Owners</span><span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>
+    <span class="n">loaded</span><span class="o">.</span><span class="n">Hospital_Owners</span> <span class="o">=</span> <span class="p">(</span><span class="n">Hospital_Owners</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="mi">56</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="mi">5</span><span class="p">])</span>
+    <span class="n">names</span><span class="p">(</span><span class="n">loaded</span><span class="o">.</span><span class="n">Hospital_Owners</span><span class="p">)</span> <span class="o">=</span> <span class="n">unlist</span><span class="p">(</span><span class="n">col_name_HospOwners</span><span class="p">)</span>
+    <span class="n">row</span><span class="o">.</span><span class="n">names</span><span class="p">(</span><span class="n">loaded</span><span class="o">.</span><span class="n">Hospital_Owners</span><span class="p">)</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span><span class="n">nrow</span><span class="p">(</span><span class="n">loaded</span><span class="o">.</span><span class="n">Hospital_Owners</span><span class="p">)</span>
+    
+    <span class="k">return</span><span class="p">(</span><span class="n">loaded</span><span class="o">.</span><span class="n">Hospital_Owners</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="n">get_federal_funds_df</span> <span class="o">=</span> <span class="n">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">Federal_Funds</span> <span class="o">=</span> <span class="n">read</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="s">&#39;./data/raw/Federal_Funds.csv&#39;</span><span class="p">,</span><span class="n">header</span> <span class="o">=</span> <span class="n">F</span><span class="p">)</span>
+    <span class="n">col_name_FedFunds</span> <span class="o">=</span> <span class="n">Federal_Funds</span><span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="mi">7</span><span class="p">]</span>
+    <span class="n">loaded</span><span class="o">.</span><span class="n">Federal_Funds</span> <span class="o">=</span> <span class="p">(</span><span class="n">Federal_Funds</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="mi">64</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="mi">7</span><span class="p">])</span>
+    <span class="n">names</span><span class="p">(</span><span class="n">loaded</span><span class="o">.</span><span class="n">Federal_Funds</span><span class="p">)</span> <span class="o">=</span> <span class="n">unlist</span><span class="p">(</span><span class="n">col_name_FedFunds</span><span class="p">)</span>
+    <span class="n">row</span><span class="o">.</span><span class="n">names</span><span class="p">(</span><span class="n">loaded</span><span class="o">.</span><span class="n">Federal_Funds</span><span class="p">)</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span><span class="n">nrow</span><span class="p">(</span><span class="n">loaded</span><span class="o">.</span><span class="n">Federal_Funds</span><span class="p">)</span>
+    
+    <span class="k">return</span><span class="p">(</span><span class="n">loaded</span><span class="o">.</span><span class="n">Federal_Funds</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="n">get_test_rate_df</span> <span class="o">=</span> <span class="n">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">Test_Rate</span> <span class="o">=</span> <span class="n">read</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="s">&#39;./data/raw/Test_Rate.csv&#39;</span><span class="p">,</span><span class="n">header</span> <span class="o">=</span> <span class="n">F</span><span class="p">)</span>
+    <span class="n">col_name_TestRate</span> <span class="o">=</span> <span class="n">Test_Rate</span><span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+    <span class="n">loaded</span><span class="o">.</span><span class="n">Test_Rate</span> <span class="o">=</span> <span class="p">(</span><span class="n">Test_Rate</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="mi">58</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span>
+    <span class="n">names</span><span class="p">(</span><span class="n">loaded</span><span class="o">.</span><span class="n">Test_Rate</span><span class="p">)</span> <span class="o">=</span> <span class="n">unlist</span><span class="p">(</span><span class="n">col_name_TestRate</span><span class="p">)</span>
+    <span class="n">row</span><span class="o">.</span><span class="n">names</span><span class="p">(</span><span class="n">loaded</span><span class="o">.</span><span class="n">Test_Rate</span><span class="p">)</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span><span class="n">nrow</span><span class="p">(</span><span class="n">loaded</span><span class="o">.</span><span class="n">Test_Rate</span><span class="p">)</span>
+    
+    <span class="k">return</span><span class="p">(</span><span class="n">loaded</span><span class="o">.</span><span class="n">Test_Rate</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="n">get_sex_ed_6_8_df</span> <span class="o">=</span> <span class="n">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">Sex_Ed_6_8</span> <span class="o">=</span> <span class="n">read</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="s">&#39;./data/raw/Sex_Ed_6_8.csv&#39;</span><span class="p">,</span><span class="n">header</span> <span class="o">=</span> <span class="n">F</span><span class="p">)</span>
+    <span class="n">col_name_SexEd_6_8</span> <span class="o">=</span> <span class="n">Sex_Ed_6_8</span><span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+    <span class="n">loaded</span><span class="o">.</span><span class="n">Sex_Ed_6_8</span> <span class="o">=</span> <span class="p">(</span><span class="n">Sex_Ed_6_8</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="mi">56</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span>
+    <span class="n">names</span><span class="p">(</span><span class="n">loaded</span><span class="o">.</span><span class="n">Sex_Ed_6_8</span><span class="p">)</span> <span class="o">=</span> <span class="n">unlist</span><span class="p">(</span><span class="n">col_name_SexEd_6_8</span><span class="p">)</span>
+    <span class="n">row</span><span class="o">.</span><span class="n">names</span><span class="p">(</span><span class="n">loaded</span><span class="o">.</span><span class="n">Sex_Ed_6_8</span><span class="p">)</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span><span class="n">nrow</span><span class="p">(</span><span class="n">loaded</span><span class="o">.</span><span class="n">Sex_Ed_6_8</span><span class="p">)</span>
+    
+    <span class="k">return</span><span class="p">(</span><span class="n">loaded</span><span class="o">.</span><span class="n">Sex_Ed_6_8</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="n">get_sex_ed_9_12_df</span> <span class="o">=</span> <span class="n">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">Sex_Ed_9_12</span> <span class="o">=</span> <span class="n">read</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="s">&#39;./data/raw/Sex_Ed_9_12.csv&#39;</span><span class="p">,</span><span class="n">header</span> <span class="o">=</span> <span class="n">F</span><span class="p">)</span>
+    <span class="n">col_name_SexEd_9_12</span> <span class="o">=</span> <span class="n">Sex_Ed_9_12</span><span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+    <span class="n">loaded</span><span class="o">.</span><span class="n">Sex_Ed_9_12</span> <span class="o">=</span> <span class="p">(</span><span class="n">Sex_Ed_9_12</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="mi">56</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span>
+    <span class="n">names</span><span class="p">(</span><span class="n">loaded</span><span class="o">.</span><span class="n">Sex_Ed_9_12</span><span class="p">)</span> <span class="o">=</span> <span class="n">unlist</span><span class="p">(</span><span class="n">col_name_SexEd_9_12</span><span class="p">)</span>
+    <span class="n">row</span><span class="o">.</span><span class="n">names</span><span class="p">(</span><span class="n">loaded</span><span class="o">.</span><span class="n">Sex_Ed_9_12</span><span class="p">)</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span><span class="n">nrow</span><span class="p">(</span><span class="n">loaded</span><span class="o">.</span><span class="n">Sex_Ed_9_12</span><span class="p">)</span>
+    
+    <span class="k">return</span><span class="p">(</span><span class="n">loaded</span><span class="o">.</span><span class="n">Sex_Ed_9_12</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="n">get_chlamydia_df</span> <span class="o">=</span> <span class="n">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">chlamydia_cases</span> <span class="o">=</span> <span class="n">read</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="s">&#39;./data/raw/chlamydia_cases.csv&#39;</span><span class="p">,</span><span class="n">header</span> <span class="o">=</span> <span class="n">F</span><span class="p">)</span>
+    <span class="n">col_name_chlamydia</span> <span class="o">=</span> <span class="n">chlamydia_cases</span><span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+    <span class="n">loaded</span><span class="o">.</span><span class="n">chlamydia_cases</span> <span class="o">=</span> <span class="p">(</span><span class="n">chlamydia_cases</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="mi">59</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span>
+    <span class="n">names</span><span class="p">(</span><span class="n">loaded</span><span class="o">.</span><span class="n">chlamydia_cases</span><span class="p">)</span> <span class="o">=</span> <span class="n">unlist</span><span class="p">(</span><span class="n">col_name_chlamydia</span><span class="p">)</span>
+    <span class="n">row</span><span class="o">.</span><span class="n">names</span><span class="p">(</span><span class="n">loaded</span><span class="o">.</span><span class="n">chlamydia_cases</span><span class="p">)</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span><span class="n">nrow</span><span class="p">(</span><span class="n">loaded</span><span class="o">.</span><span class="n">chlamydia_cases</span><span class="p">)</span>
+    
+    <span class="k">return</span><span class="p">(</span><span class="n">loaded</span><span class="o">.</span><span class="n">chlamydia_cases</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="n">get_gonorrhea_df</span> <span class="o">=</span> <span class="n">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">gonorrhea_cases</span> <span class="o">=</span> <span class="n">read</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="s">&#39;./data/raw/gonorrhea_cases.csv&#39;</span><span class="p">,</span><span class="n">header</span> <span class="o">=</span> <span class="n">F</span><span class="p">)</span>
+    <span class="n">col_name_gonorrhea</span> <span class="o">=</span> <span class="n">gonorrhea_cases</span><span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+    <span class="n">loaded</span><span class="o">.</span><span class="n">gonorrhea_cases</span> <span class="o">=</span> <span class="p">(</span><span class="n">gonorrhea_cases</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="mi">59</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span>
+    <span class="n">names</span><span class="p">(</span><span class="n">loaded</span><span class="o">.</span><span class="n">gonorrhea_cases</span><span class="p">)</span> <span class="o">=</span> <span class="n">unlist</span><span class="p">(</span><span class="n">col_name_gonorrhea</span><span class="p">)</span>
+    <span class="n">row</span><span class="o">.</span><span class="n">names</span><span class="p">(</span><span class="n">loaded</span><span class="o">.</span><span class="n">gonorrhea_cases</span><span class="p">)</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span><span class="n">nrow</span><span class="p">(</span><span class="n">loaded</span><span class="o">.</span><span class="n">gonorrhea_cases</span><span class="p">)</span>
+    
+    <span class="k">return</span><span class="p">(</span><span class="n">loaded</span><span class="o">.</span><span class="n">gonorrhea_cases</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="n">get_syphilis_df</span> <span class="o">=</span> <span class="n">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">syphilis_cases</span> <span class="o">=</span> <span class="n">read</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="s">&#39;./data/raw/syphilis_cases.csv&#39;</span><span class="p">,</span><span class="n">header</span> <span class="o">=</span> <span class="n">F</span><span class="p">)</span>
+    <span class="n">col_name_syphilis</span> <span class="o">=</span> <span class="n">syphilis_cases</span><span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+    <span class="n">loaded</span><span class="o">.</span><span class="n">syphilis_cases</span> <span class="o">=</span> <span class="p">(</span><span class="n">syphilis_cases</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="mi">59</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span>
+    <span class="n">names</span><span class="p">(</span><span class="n">loaded</span><span class="o">.</span><span class="n">syphilis_cases</span><span class="p">)</span> <span class="o">=</span> <span class="n">unlist</span><span class="p">(</span><span class="n">col_name_syphilis</span><span class="p">)</span>
+    <span class="n">row</span><span class="o">.</span><span class="n">names</span><span class="p">(</span><span class="n">loaded</span><span class="o">.</span><span class="n">syphilis_cases</span><span class="p">)</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span><span class="n">nrow</span><span class="p">(</span><span class="n">loaded</span><span class="o">.</span><span class="n">syphilis_cases</span><span class="p">)</span>
+    
+    <span class="k">return</span><span class="p">(</span><span class="n">loaded</span><span class="o">.</span><span class="n">syphilis_cases</span><span class="p">)</span>
+<span class="p">}</span>
 </pre></div>
 
 </div>
@@ -2555,31 +2165,11 @@ In&nbsp;[11]:
 <div class="hbox output_area"><div class="prompt"></div>
 <div class="box-flex1 output_subarea output_stream output_stdout">
 <pre>
-&lt;html&gt;
-&lt;head&gt;&lt;title&gt;301 Moved Permanently&lt;/title&gt;&lt;/head&gt;
-&lt;body bgcolor=&quot;white&quot;&gt;
-&lt;center&gt;&lt;h1&gt;301 Moved Permanently&lt;/h1&gt;&lt;/center&gt;
-&lt;hr&gt;&lt;center&gt;nginx&lt;/center&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-
+Overwriting ./scripts/hiv_loader.R
 
 </pre>
 </div>
 </div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell vbox">
-<div class="input hbox">
-<div class="prompt input_prompt">
-In&nbsp;[]:
-</div>
-<div class="input_area box-flex1">
-<div class="highlight-ipynb"><pre class="ipynb">
-</pre></div>
 
 </div>
 </div>
