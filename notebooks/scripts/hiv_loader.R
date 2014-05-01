@@ -119,7 +119,7 @@ get_chlamydia_df = function() {
     return(loaded.chlamydia_cases)
 }
 
-get_gonnorhea_df = function() {
+get_gonorrhea_df = function() {
     gonorrhea_cases = read.csv('./data/raw/gonorrhea_cases.csv',header = F)
     col_name_gonorrhea = gonorrhea_cases[4,1:2]
     loaded.gonorrhea_cases = (gonorrhea_cases[5:59,1:2])
