@@ -1,7 +1,58 @@
-<html>
-<head><title>301 Moved Permanently</title></head>
-<body bgcolor="white">
-<center><h1>301 Moved Permanently</h1></center>
-<hr><center>nginx</center>
-</body>
-</html>
+"Title: Percentage of Persons Aged 18-64 Who Reported Ever Receiving an HIV Test",,
+"Timeframe: 2012",,
+"Notes: See http://kff.org/hivaids/state-indicator/hiv-testing-rate-ever-tested/# for notes and sources.",,
+Location,"HIV Testing Rate - Ever Tested"
+"United States",0.37
+Alabama,0.42
+Alaska,0.443
+Arizona,0.341
+Arkansas,0.311
+California,0.392
+Colorado,0.361
+Connecticut,0.341
+Delaware,0.428
+"District of Columbia",0.663
+Florida,0.428
+Georgia,0.443
+Hawaii,0.297
+Idaho,0.286
+Illinois,0.305
+Indiana,0.302
+Iowa,0.259
+Kansas,0.306
+Kentucky,0.314
+Louisiana,0.438
+Maine,0.308
+Maryland,0.456
+Massachusetts,0.371
+Michigan,0.345
+Minnesota,0.278
+Mississippi,0.397
+Missouri,0.332
+Montana,0.313
+Nebraska,0.262
+Nevada,0.407
+"New Hampshire",0.307
+"New Jersey",0.385
+"New Mexico",0.342
+"New York",0.432
+"North Carolina",0.422
+"North Dakota",0.254
+Ohio,0.307
+Oklahoma,0.307
+Oregon,0.341
+Pennsylvania,0.322
+"Rhode Island",0.34
+"South Carolina",0.36
+"South Dakota",0.25
+Tennessee,0.406
+Texas,0.394
+Utah,0.234
+Vermont,0.3
+Virginia,0.413
+Washington,0.352
+"West Virginia",0.303
+Wisconsin,0.298
+Wyoming,0.308
+Guam,0.297
+"Puerto Rico",0.433

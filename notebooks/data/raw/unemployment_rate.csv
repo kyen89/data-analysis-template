@@ -1,7 +1,57 @@
-<html>
-<head><title>301 Moved Permanently</title></head>
-<body bgcolor="white">
-<center><h1>301 Moved Permanently</h1></center>
-<hr><center>nginx</center>
-</body>
-</html>
+"Title: Unemployment Rate (Seasonally Adjusted)",,,
+"Timeframe: 2012-2013",,,
+"Notes: See http://kff.org/uninsured/state-indicator/unemployment-rate/# for notes and sources.",,,
+Location,"October 2012","October 2013"
+"United States",0.079,0.073
+Alabama,0.071,0.065
+Alaska,0.068,0.065
+Arizona,0.081,0.082
+Arkansas,0.072,0.075
+California,0.101,0.087
+Colorado,0.077,0.068
+Connecticut,0.084,0.079
+Delaware,0.071,0.068
+"District of Columbia",0.086,0.089
+Florida,0.082,0.067
+Georgia,0.088,0.081
+Hawaii,0.054,0.044
+Idaho,0.066,0.067
+Illinois,0.088,0.089
+Indiana,0.084,0.075
+Iowa,0.051,0.046
+Kansas,0.056,0.056
+Kentucky,0.081,0.084
+Louisiana,0.059,0.065
+Maine,0.072,0.067
+Maryland,0.068,0.067
+Massachusetts,0.067,0.072
+Michigan,0.091,0.09
+Minnesota,0.056,0.048
+Mississippi,0.091,0.085
+Missouri,0.067,0.065
+Montana,0.058,0.052
+Nebraska,0.039,0.039
+Nevada,0.103,0.093
+"New Hampshire",0.057,0.051
+"New Jersey",0.096,0.084
+"New Mexico",0.068,0.066
+"New York",0.084,0.077
+"North Carolina",0.094,0.08
+"North Dakota",0.032,0.027
+Ohio,0.069,0.075
+Oklahoma,0.052,0.055
+Oregon,0.085,0.077
+Pennsylvania,0.08,0.075
+"Rhode Island",0.101,0.092
+"South Carolina",0.088,0.075
+"South Dakota",0.044,0.037
+Tennessee,0.078,0.084
+Texas,0.064,0.062
+Utah,0.055,0.046
+Vermont,0.05,0.045
+Virginia,0.058,0.056
+Washington,0.078,0.07
+"West Virginia",0.075,0.062
+Wisconsin,0.068,0.065
+Wyoming,0.051,0.046
+"Puerto Rico",0.142,0.147

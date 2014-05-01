@@ -1,7 +1,56 @@
-<html>
-<head><title>301 Moved Permanently</title></head>
-<body bgcolor="white">
-<center><h1>301 Moved Permanently</h1></center>
-<hr><center>nginx</center>
-</body>
-</html>
+"Title: Hospitals by Ownership Type",,,,,
+"Timeframe: 2011",,,,,
+"Notes: See http://kff.org/uninsured/state-indicator/hospitals-by-ownership/# for notes and sources.",,,,,
+Location,"State/Local Government",Non-Profit,For-Profit,Total
+"United States",21.0,58.4,20.6,100.0
+Alabama,38.2,23.5,38.2,100.0
+Alaska,30.4,60.9,8.7,100.0
+Arizona,5.7,67.1,27.1,100.0
+Arkansas,13.1,59.5,27.4,100.0
+California,20.0,58.6,21.4,100.0
+Colorado,32.9,46.3,20.7,100.0
+Connecticut,2.9,94.3,2.9,100.0
+Delaware,NA,85.7,14.3,100.0
+"District of Columbia",9.1,63.6,27.3,100.0
+Florida,12.2,38.0,49.8,100.0
+Georgia,32.0,44.4,23.5,100.0
+Hawaii,30.4,69.6,NA,100.0
+Idaho,47.5,42.5,10.0,100.0
+Illinois,12.8,77.1,10.1,100.0
+Indiana,24.0,56.8,19.2,100.0
+Iowa,50.0,48.3,1.7,100.0
+Kansas,47.7,40.2,12.1,100.0
+Kentucky,11.3,69.8,18.9,100.0
+Louisiana,37.8,30.7,31.5,100.0
+Maine,5.4,91.9,2.7,100.0
+Maryland,NA,95.8,4.2,100.0
+Massachusetts,1.3,82.3,16.5,100.0
+Michigan,9.2,77.8,13.1,100.0
+Minnesota,28.8,70.5,0.8,100.0
+Mississippi,40.4,29.3,30.3,100.0
+Missouri,29.2,52.5,18.3,100.0
+Montana,20.8,77.1,2.1,100.0
+Nebraska,43.0,53.5,3.5,100.0
+Nevada,15.8,34.2,50.0,100.0
+"New Hampshire",NA,85.7,14.3,100.0
+"New Jersey",2.7,83.6,13.7,100.0
+"New Mexico",16.7,41.7,41.7,100.0
+"New York",14.3,85.7,NA,100.0
+"North Carolina",25.6,64.1,10.3,100.0
+"North Dakota",NA,95.1,4.9,100.0
+Ohio,10.4,75.4,14.2,100.0
+Oklahoma,35.7,33.0,31.3,100.0
+Oregon,20.3,76.3,3.4,100.0
+Pennsylvania,1.0,74.7,24.2,100.0
+"Rhode Island",NA,100.0,NA,100.0
+"South Carolina",28.8,34.8,36.4,100.0
+"South Dakota",7.5,84.9,7.5,100.0
+Tennessee,15.8,37.6,46.6,100.0
+Texas,26.2,35.5,38.3,100.0
+Utah,13.0,54.3,32.6,100.0
+Vermont,NA,100.0,NA,100.0
+Virginia,4.5,73.0,22.5,100.0
+Washington,44.7,48.2,7.1,100.0
+"West Virginia",14.5,60.0,25.5,100.0
+Wisconsin,1.6,95.2,3.2,100.0
+Wyoming,66.7,20.8,12.5,100.0

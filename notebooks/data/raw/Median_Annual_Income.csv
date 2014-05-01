@@ -1,7 +1,56 @@
-<html>
-<head><title>301 Moved Permanently</title></head>
-<body bgcolor="white">
-<center><h1>301 Moved Permanently</h1></center>
-<hr><center>nginx</center>
-</body>
-</html>
+"Title: Median Annual Household Income",,
+"Timeframe: 2009-2011",,
+"Notes: See http://kff.org/uninsured/state-indicator/median-annual-income/# for notes and sources.",,
+Location,"Median Annual Income"
+"United States",50443
+Alabama,42245
+Alaska,60566
+Arizona,48319
+Arkansas,39806
+California,56074
+Colorado,59803
+Connecticut,67165
+Delaware,55421
+"District of Columbia",56566
+Florida,46136
+Georgia,45642
+Hawaii,59605
+Idaho,48348
+Illinois,52801
+Indiana,46166
+Iowa,51322
+Kansas,46847
+Kentucky,42331
+Louisiana,42946
+Maine,49648
+Maryland,67469
+Massachusetts,62809
+Michigan,48281
+Minnesota,56869
+Mississippi,39078
+Missouri,48058
+Montana,41753
+Nebraska,53927
+Nevada,51263
+"New Hampshire",67287
+"New Jersey",65072
+"New Mexico",44732
+"New York",51547
+"North Carolina",44787
+"North Dakota",53827
+Ohio,46696
+Oklahoma,47008
+Oregon,51735
+Pennsylvania,50087
+"Rhode Island",52142
+"South Carolina",42065
+"South Dakota",47353
+Tennessee,41524
+Texas,49195
+Utah,58438
+Vermont,54805
+Virginia,62776
+Washington,59370
+"West Virginia",42801
+Wisconsin,52574
+Wyoming,54458
