@@ -10,6 +10,7 @@ import os
 AUTHOR = u'Alfonso Bonilla, Keun Gang Kyen, Bill Yeh, Angela Lee, Jisu Park'
 SITENAME = u'HIV Risk Analysis'
 SITESUBTITLE = u'Comparing HIV Risk between different states in the US'
+GITHUB_REPOSITORY_URL = u'https://github.com/kyen89/project2'
 
 ###################################################
 # FINER WEBSITE CONF (Defaults should be okay)
