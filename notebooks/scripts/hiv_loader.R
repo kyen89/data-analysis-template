@@ -1,4 +1,6 @@
 
+options(stringsAsFactors=FALSE)
+
 get_hiv_diagnoses_df = function() {
     HIV_Diagnoses = read.csv('./data/raw/HIV_Diagnoses.csv', header = F)
     col_name_HIV = HIV_Diagnoses[4,1:2]
