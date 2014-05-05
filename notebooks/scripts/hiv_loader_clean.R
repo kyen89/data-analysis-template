@@ -33,9 +33,11 @@ get_all_data = function() {
     chlamydia[, -1] = sapply(chlamydia[, -1], as.numeric)
     gonorrhea[, -1] = sapply(gonorrhea[, -1], as.numeric)
     syphilis[, -1] = sapply(syphilis[, -1], as.numeric)
-    
+
     # Percentages are probably much more useful here than raw numbers
     hospital[, -1] = hospital[, -1] / 100
+    sex_ed_6_9[, -1] = sex_ed_6_9[, -1] / 100
+    sex_ed_9_12[, -1] = sex_ed_9_12[, -1] / 100
     
     all_data$hiv_diagnoses = hiv_diagnoses
     all_data$citizenship_status = citizenship_status
