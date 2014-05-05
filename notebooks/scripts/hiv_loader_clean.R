@@ -38,6 +38,7 @@ get_all_data = function() {
     hospital[, -1] = hospital[, -1] / 100
     sex_ed_6_9[, -1] = sex_ed_6_9[, -1] / 100
     sex_ed_9_12[, -1] = sex_ed_9_12[, -1] / 100
+    federal_funds[, -1] = federal_funds[, -1] / 100000000
     
     all_data$hiv_diagnoses = hiv_diagnoses
     all_data$citizenship_status = citizenship_status
