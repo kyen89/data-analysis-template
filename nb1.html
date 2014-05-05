@@ -1839,12 +1839,12 @@ HIV Risk Analysis            </a>
 </div>
 
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We used R functions to download the data at first, the but the website generates the data dynamically with POST requests. <strong>This following section of code will download empty files, but it shows the URLs we used.</strong> We ended up downloading the CSV files manually.</p>
+<p>We used R functions to download the data at first, the but the website generates the data dynamically with POST requests. <strong>This following section of code will download empty files, but it shows the URLs we used.</strong> We ended up downloading the CSV files manually from our own files on Dropbox.</p>
 </div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[4]:
+In&nbsp;[40]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="o">%</span><span class="k">reload_ext</span> <span class="n">rmagic</span>
@@ -1857,7 +1857,7 @@ In&nbsp;[4]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[5]:
+In&nbsp;[41]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="o">%%</span><span class="k">R</span>
@@ -1875,23 +1875,41 @@ In&nbsp;[5]:
 
 </div>
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>First, we gathered data for the infection rate per 100000 of HIV diagnosis, adults and adolescents.</p>
+<p>First, we gathered data for the infection rate per 100000 of HIV diagnosis, adults and adolescents. This data came from http://kff.org/state-category/hivaids/.</p>
 </div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[]:
+In&nbsp;[42]:
 </div>
 <div class="input_area box-flex1">
-<div class="highlight-ipynb"><pre class="ipynb"><span class="n">protcol</span> <span class="o">=</span> <span class="s">&#39;http://&#39;</span>
-<span class="n">website</span> <span class="o">=</span> <span class="s">&#39;www.kff.org/&#39;</span>
-<span class="n">location</span> <span class="o">=</span> <span class="s">&#39;state-category/&#39;</span>
+<div class="highlight-ipynb"><pre class="ipynb"><span class="n">protcol</span> <span class="o">=</span> <span class="s">&#39;https://&#39;</span>
+<span class="n">website</span> <span class="o">=</span> <span class="s">&#39;dl.dropboxusercontent.com/u/30426053/hiv_data/&#39;</span>
 
-<span class="n">csv_key</span> <span class="o">=</span> <span class="s">&#39;estimated-rates-per-100000-of-hiv-diagnosis-adults-and-adolescents-2/#&#39;</span>
-<span class="n">csv_url</span> <span class="o">=</span> <span class="n">protcol</span> <span class="o">+</span> <span class="n">website</span> <span class="o">+</span> <span class="n">location</span> <span class="o">+</span> <span class="n">csv_key</span>
+<span class="n">csv_key</span> <span class="o">=</span> <span class="s">&#39;HIV_Diagnoses.csv&#39;</span>
+<span class="n">csv_url</span> <span class="o">=</span> <span class="n">protcol</span> <span class="o">+</span> <span class="n">website</span> <span class="o">+</span> <span class="n">csv_key</span>
 <span class="k">print</span> <span class="n">csv_url</span>
-<span class="o">!</span>curl <span class="nv">$csv_url</span> &gt; <span class="s1">&#39;./data/raw/hiv.csv&#39;</span>
+<span class="o">!</span>curl <span class="nv">$csv_url</span> &gt; <span class="s1">&#39;./data/raw/HIV_Diagnoses.csv&#39;</span>
 </pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+https://dl.dropboxusercontent.com/u/30426053/hiv_data/HIV_Diagnoses.csv
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  1147  100  1147    0     0   1747      0 --:--:-- --:--:-- --:--:--  1745
+
+</pre>
+</div>
+</div>
 
 </div>
 </div>
@@ -1903,97 +1921,157 @@ In&nbsp;[]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[]:
+In&nbsp;[43]:
 </div>
 <div class="input_area box-flex1">
-<div class="highlight-ipynb"><pre class="ipynb"><span class="c">##Site Information</span>
-<span class="n">protcol</span> <span class="o">=</span> <span class="s">&#39;http://&#39;</span>
-<span class="n">website</span> <span class="o">=</span> <span class="s">&#39;www.kff.org/&#39;</span>
-<span class="n">location</span> <span class="o">=</span> <span class="s">&#39;other/state-indicator/&#39;</span>
+<div class="highlight-ipynb"><pre class="ipynb"><span class="n">protcol</span> <span class="o">=</span> <span class="s">&#39;https://&#39;</span>
+<span class="n">website</span> <span class="o">=</span> <span class="s">&#39;dl.dropboxusercontent.com/u/30426053/hiv_data/&#39;</span>
 
 <span class="c">#Citizenship Status</span>
-<span class="n">cvs_key</span> <span class="o">=</span> <span class="s">&#39;distribution-by-citizenship-status/#&#39;</span>
-<span class="n">csv_url</span> <span class="o">=</span> <span class="n">protcol</span> <span class="o">+</span> <span class="n">website</span> <span class="o">+</span> <span class="n">location</span> <span class="o">+</span> <span class="n">cvs_key</span>
+<span class="n">cvs_key</span> <span class="o">=</span> <span class="s">&#39;Citizenship_Status.csv&#39;</span>
+<span class="n">csv_url</span> <span class="o">=</span> <span class="n">protcol</span> <span class="o">+</span> <span class="n">website</span> <span class="o">+</span> <span class="n">cvs_key</span>
 <span class="k">print</span> <span class="n">csv_url</span>
-<span class="o">!</span>curl <span class="nv">$csv_url</span> &gt; <span class="s1">&#39;./data/raw/citizenship_status.csv&#39;</span>
+<span class="o">!</span>curl <span class="nv">$csv_url</span> &gt; <span class="s1">&#39;./data/raw/Citizenship_Status.csv&#39;</span>
 
 <span class="c">#Population distribution by the Federal Poverty Level</span>
-<span class="n">cvs_key</span> <span class="o">=</span> <span class="s">&#39;distribution-by-fpl/#&#39;</span>
-<span class="n">csv_url</span> <span class="o">=</span> <span class="n">protcol</span> <span class="o">+</span> <span class="n">website</span> <span class="o">+</span> <span class="n">location</span> <span class="o">+</span> <span class="n">cvs_key</span>
+<span class="n">cvs_key</span> <span class="o">=</span> <span class="s">&#39;fpl.csv&#39;</span>
+<span class="n">csv_url</span> <span class="o">=</span> <span class="n">protcol</span> <span class="o">+</span> <span class="n">website</span> <span class="o">+</span> <span class="n">cvs_key</span>
 <span class="k">print</span> <span class="n">csv_url</span>
 <span class="o">!</span>curl <span class="nv">$csv_url</span> &gt; <span class="s1">&#39;./data/raw/fpl.csv&#39;</span>
 
 <span class="c">#Median Annual Income</span>
-<span class="n">cvs_key</span> <span class="o">=</span> <span class="s">&#39;median-annual-income/#&#39;</span>
-<span class="n">csv_url</span> <span class="o">=</span> <span class="n">protcol</span> <span class="o">+</span> <span class="n">website</span> <span class="o">+</span> <span class="n">location</span> <span class="o">+</span> <span class="n">cvs_key</span>
+<span class="n">cvs_key</span> <span class="o">=</span> <span class="s">&#39;Median_Annual_Income.csv&#39;</span>
+<span class="n">csv_url</span> <span class="o">=</span> <span class="n">protcol</span> <span class="o">+</span> <span class="n">website</span> <span class="o">+</span> <span class="n">cvs_key</span>
 <span class="k">print</span> <span class="n">csv_url</span>
 <span class="o">!</span>curl <span class="nv">$csv_url</span> &gt; <span class="s1">&#39;./data/raw/Median_Annual_Income.csv&#39;</span>
 
 <span class="c">#Unemployment Rate</span>
-<span class="n">cvs_key</span> <span class="o">=</span> <span class="s">&#39;unemployment-rate/#&#39;</span>
-<span class="n">csv_url</span> <span class="o">=</span> <span class="n">protcol</span> <span class="o">+</span> <span class="n">website</span> <span class="o">+</span> <span class="n">location</span> <span class="o">+</span> <span class="n">cvs_key</span>
+<span class="n">cvs_key</span> <span class="o">=</span> <span class="s">&#39;unemployment_rate.csv&#39;</span>
+<span class="n">csv_url</span> <span class="o">=</span> <span class="n">protcol</span> <span class="o">+</span> <span class="n">website</span> <span class="o">+</span> <span class="n">cvs_key</span>
 <span class="k">print</span> <span class="n">csv_url</span>
 <span class="o">!</span>curl <span class="nv">$csv_url</span> &gt; <span class="s1">&#39;./data/raw/unemployment_rate.csv&#39;</span>
 
 <span class="c">#Total Population that is Insured</span>
-<span class="n">cvs_key</span> <span class="o">=</span> <span class="s">&#39;total-population/#&#39;</span>
-<span class="n">csv_url</span> <span class="o">=</span> <span class="n">protcol</span> <span class="o">+</span> <span class="n">website</span> <span class="o">+</span> <span class="n">location</span> <span class="o">+</span> <span class="n">cvs_key</span>
+<span class="n">cvs_key</span> <span class="o">=</span> <span class="s">&#39;Has_Insurance.csv&#39;</span>
+<span class="n">csv_url</span> <span class="o">=</span> <span class="n">protcol</span> <span class="o">+</span> <span class="n">website</span> <span class="o">+</span> <span class="n">cvs_key</span>
 <span class="k">print</span> <span class="n">csv_url</span>
 <span class="o">!</span>curl <span class="nv">$csv_url</span> &gt; <span class="s1">&#39;./data/raw/Has_Insurance.csv&#39;</span>
 
-<span class="c">#Site Information</span>
-<span class="n">protcol</span> <span class="o">=</span> <span class="s">&#39;http://&#39;</span>
-<span class="n">website</span> <span class="o">=</span> <span class="s">&#39;www.kff.org/&#39;</span>
-<span class="n">location</span> <span class="o">=</span> <span class="s">&#39;state-category/&#39;</span>
-
 <span class="c">#Hospital Ownership Type</span>
-<span class="n">cvs_key</span> <span class="o">=</span> <span class="s">&#39;hospitals-by-ownership/#&#39;</span>
-<span class="n">csv_url</span> <span class="o">=</span> <span class="n">protcol</span> <span class="o">+</span> <span class="n">website</span> <span class="o">+</span> <span class="n">location</span> <span class="o">+</span> <span class="n">cvs_key</span>
+<span class="n">cvs_key</span> <span class="o">=</span> <span class="s">&#39;Hospital_Owners.csv&#39;</span>
+<span class="n">csv_url</span> <span class="o">=</span> <span class="n">protcol</span> <span class="o">+</span> <span class="n">website</span> <span class="o">+</span> <span class="n">cvs_key</span>
 <span class="k">print</span> <span class="n">csv_url</span>
 <span class="o">!</span>curl <span class="nv">$csv_url</span> &gt; <span class="s1">&#39;./data/raw/Hospital_Owners.csv&#39;</span>
 
 <span class="c">#Federal Funding for Aids prevention</span>
-<span class="n">cvs_key</span> <span class="o">=</span> <span class="s">&#39;total-federal-grant-funding/#&#39;</span>
-<span class="n">csv_url</span> <span class="o">=</span> <span class="n">protcol</span> <span class="o">+</span> <span class="n">website</span> <span class="o">+</span> <span class="n">location</span> <span class="o">+</span> <span class="n">cvs_key</span>
+<span class="n">cvs_key</span> <span class="o">=</span> <span class="s">&#39;Federal_Funds.csv&#39;</span>
+<span class="n">csv_url</span> <span class="o">=</span> <span class="n">protcol</span> <span class="o">+</span> <span class="n">website</span> <span class="o">+</span> <span class="n">cvs_key</span>
 <span class="k">print</span> <span class="n">csv_url</span>
 <span class="o">!</span>curl <span class="nv">$csv_url</span> &gt; <span class="s1">&#39;./data/raw/Federal_Funds.csv&#39;</span>
 
 <span class="c">#Hiv Testing Rate</span>
-<span class="n">cvs_key</span> <span class="o">=</span> <span class="s">&#39;hiv-testing-rate-ever-tested/#&#39;</span>
-<span class="n">csv_url</span> <span class="o">=</span> <span class="n">protcol</span> <span class="o">+</span> <span class="n">website</span> <span class="o">+</span> <span class="n">location</span> <span class="o">+</span> <span class="n">cvs_key</span>
+<span class="n">cvs_key</span> <span class="o">=</span> <span class="s">&#39;Test_Rate.csv&#39;</span>
+<span class="n">csv_url</span> <span class="o">=</span> <span class="n">protcol</span> <span class="o">+</span> <span class="n">website</span> <span class="o">+</span> <span class="n">cvs_key</span>
 <span class="k">print</span> <span class="n">csv_url</span>
 <span class="o">!</span>curl <span class="nv">$csv_url</span> &gt; <span class="s1">&#39;./data/raw/Test_Rate.csv&#39;</span>
 
 <span class="c">#Sex Ed Grades 6-8</span>
-<span class="n">cvs_key</span> <span class="o">=</span> <span class="s">&#39;hivstdpregnancy-education-grades-6-8/#&#39;</span>
-<span class="n">csv_url</span> <span class="o">=</span> <span class="n">protcol</span> <span class="o">+</span> <span class="n">website</span> <span class="o">+</span> <span class="n">location</span> <span class="o">+</span> <span class="n">cvs_key</span>
+<span class="n">cvs_key</span> <span class="o">=</span> <span class="s">&#39;Sex_Ed_6_8.csv&#39;</span>
+<span class="n">csv_url</span> <span class="o">=</span> <span class="n">protcol</span> <span class="o">+</span> <span class="n">website</span> <span class="o">+</span> <span class="n">cvs_key</span>
 <span class="k">print</span> <span class="n">csv_url</span>
-<span class="o">!</span>curl <span class="nv">$csv_url</span> &gt; <span class="s1">&#39;./data/raw/Sex_Ed_6-8.csv&#39;</span>
+<span class="o">!</span>curl <span class="nv">$csv_url</span> &gt; <span class="s1">&#39;./data/raw/Sex_Ed_6_8.csv&#39;</span>
 
 <span class="c">#Sex Ed Grades 9-12</span>
-<span class="n">cvs_key</span> <span class="o">=</span> <span class="s">&#39;hivstdpregnancy-education-grades-9-12/#&#39;</span>
-<span class="n">csv_url</span> <span class="o">=</span> <span class="n">protcol</span> <span class="o">+</span> <span class="n">website</span> <span class="o">+</span> <span class="n">location</span> <span class="o">+</span> <span class="n">cvs_key</span>
+<span class="n">cvs_key</span> <span class="o">=</span> <span class="s">&#39;Sex_Ed_9_12.csv&#39;</span>
+<span class="n">csv_url</span> <span class="o">=</span> <span class="n">protcol</span> <span class="o">+</span> <span class="n">website</span> <span class="o">+</span> <span class="n">cvs_key</span>
 <span class="k">print</span> <span class="n">csv_url</span>
-<span class="o">!</span>curl <span class="nv">$csv_url</span> &gt; <span class="s1">&#39;./data/raw/Sex_Ed_9-12.csv&#39;</span>
+<span class="o">!</span>curl <span class="nv">$csv_url</span> &gt; <span class="s1">&#39;./data/raw/Sex_Ed_9_12.csv&#39;</span>
 
 <span class="c">#Number of Reported Chlamydia Cases</span>
-<span class="n">cvs_key</span> <span class="o">=</span> <span class="s">&#39;chlamydia-cases/#&#39;</span>
-<span class="n">csv_url</span> <span class="o">=</span> <span class="n">protcol</span> <span class="o">+</span> <span class="n">website</span> <span class="o">+</span> <span class="n">location</span> <span class="o">+</span> <span class="n">cvs_key</span>
+<span class="n">cvs_key</span> <span class="o">=</span> <span class="s">&#39;chlamydia_cases.csv&#39;</span>
+<span class="n">csv_url</span> <span class="o">=</span> <span class="n">protcol</span> <span class="o">+</span> <span class="n">website</span> <span class="o">+</span> <span class="n">cvs_key</span>
 <span class="k">print</span> <span class="n">csv_url</span>
-<span class="o">!</span>curl <span class="nv">$csv_url</span> &gt; <span class="s1">&#39;./data/raw/chlamydia-cases.csv&#39;</span>
+<span class="o">!</span>curl <span class="nv">$csv_url</span> &gt; <span class="s1">&#39;./data/raw/chlamydia_cases.csv&#39;</span>
 
 <span class="c">#Number of Reported Gonorrhea Cases</span>
-<span class="n">cvs_key</span> <span class="o">=</span> <span class="s">&#39;gonorrhea-cases/#&#39;</span>
-<span class="n">csv_url</span> <span class="o">=</span> <span class="n">protcol</span> <span class="o">+</span> <span class="n">website</span> <span class="o">+</span> <span class="n">location</span> <span class="o">+</span> <span class="n">cvs_key</span>
+<span class="n">cvs_key</span> <span class="o">=</span> <span class="s">&#39;gonorrhea_cases.csv&#39;</span>
+<span class="n">csv_url</span> <span class="o">=</span> <span class="n">protcol</span> <span class="o">+</span> <span class="n">website</span> <span class="o">+</span> <span class="n">cvs_key</span>
 <span class="k">print</span> <span class="n">csv_url</span>
-<span class="o">!</span>curl <span class="nv">$csv_url</span> &gt; <span class="s1">&#39;./data/raw/gonorrhea-cases.csv&#39;</span>
+<span class="o">!</span>curl <span class="nv">$csv_url</span> &gt; <span class="s1">&#39;./data/raw/gonorrhea_cases.csv&#39;</span>
 
 <span class="c">#Number of Reported Syphilis Cases</span>
-<span class="n">cvs_key</span> <span class="o">=</span> <span class="s">&#39;syphilis-cases/#&#39;</span>
-<span class="n">csv_url</span> <span class="o">=</span> <span class="n">protcol</span> <span class="o">+</span> <span class="n">website</span> <span class="o">+</span> <span class="n">location</span> <span class="o">+</span> <span class="n">cvs_key</span>
+<span class="n">cvs_key</span> <span class="o">=</span> <span class="s">&#39;syphilis_cases.csv&#39;</span>
+<span class="n">csv_url</span> <span class="o">=</span> <span class="n">protcol</span> <span class="o">+</span> <span class="n">website</span> <span class="o">+</span> <span class="n">cvs_key</span>
 <span class="k">print</span> <span class="n">csv_url</span>
-<span class="o">!</span>curl <span class="nv">$csv_url</span> &gt; <span class="s1">&#39;./data/raw/syphilis-cases.csv&#39;</span>
+<span class="o">!</span>curl <span class="nv">$csv_url</span> &gt; <span class="s1">&#39;./data/raw/syphilis_cases.csv&#39;</span>
 </pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+https://dl.dropboxusercontent.com/u/30426053/hiv_data/Citizenship_Status.csv
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  2099  100  2099    0     0   2497      0 --:--:-- --:--:-- --:--:--  2495
+https://dl.dropboxusercontent.com/u/30426053/hiv_data/fpl.csv
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  4023  100  4023    0     0   6541      0 --:--:-- --:--:-- --:--:--  6552
+https://dl.dropboxusercontent.com/u/30426053/hiv_data/Median_Annual_Income.csv
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  1045  100  1045    0     0   1617      0 --:--:-- --:--:-- --:--:--  1620
+https://dl.dropboxusercontent.com/u/30426053/hiv_data/unemployment_rate.csv
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  1394  100  1394    0     0   2353      0 --:--:-- --:--:-- --:--:--  2354
+https://dl.dropboxusercontent.com/u/30426053/hiv_data/Has_Insurance.csv
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  4514  100  4514    0     0   6510      0 --:--:-- --:--:-- --:--:--  6504
+https://dl.dropboxusercontent.com/u/30426053/hiv_data/Hospital_Owners.csv
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  1816  100  1816    0     0   2382      0 --:--:-- --:--:-- --:--:--  2380
+https://dl.dropboxusercontent.com/u/30426053/hiv_data/Federal_Funds.csv
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0100  3335  100  3335    0     0   2838      0  0:00:01  0:00:01 --:--:--  2840
+https://dl.dropboxusercontent.com/u/30426053/hiv_data/Test_Rate.csv
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  1122  100  1122    0     0   1423      0 --:--:-- --:--:-- --:--:--  1423
+https://dl.dropboxusercontent.com/u/30426053/hiv_data/Sex_Ed_6_8.csv
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  1553  100  1553    0     0   2303      0 --:--:-- --:--:-- --:--:--  2304
+https://dl.dropboxusercontent.com/u/30426053/hiv_data/Sex_Ed_9_12.csv
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  1563  100  1563    0     0   2709      0 --:--:-- --:--:-- --:--:--  2713
+https://dl.dropboxusercontent.com/u/30426053/hiv_data/chlamydia_cases.csv
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  1071  100  1071    0     0   1775      0 --:--:-- --:--:-- --:--:--  1776
+https://dl.dropboxusercontent.com/u/30426053/hiv_data/gonorrhea_cases.csv
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  1022  100  1022    0     0   1612      0 --:--:-- --:--:-- --:--:--  1611
+https://dl.dropboxusercontent.com/u/30426053/hiv_data/syphilis_cases.csv
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   963  100   963    0     0   1515      0 --:--:-- --:--:-- --:--:--  1514100   963  100   963    0     0   1511      0 --:--:-- --:--:-- --:--:--  1511
+
+</pre>
+</div>
+</div>
 
 </div>
 </div>
@@ -2009,10 +2087,12 @@ In&nbsp;[]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[2]:
+In&nbsp;[44]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="o">%%</span><span class="k">file</span> <span class="o">./</span><span class="n">scripts</span><span class="o">/</span><span class="n">hiv_loader</span><span class="o">.</span><span class="n">R</span>
+
+<span class="n">options</span><span class="p">(</span><span class="n">stringsAsFactors</span><span class="o">=</span><span class="n">FALSE</span><span class="p">)</span>
 
 <span class="n">get_hiv_diagnoses_df</span> <span class="o">=</span> <span class="n">function</span><span class="p">()</span> <span class="p">{</span>
     <span class="n">HIV_Diagnoses</span> <span class="o">=</span> <span class="n">read</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="s">&#39;./data/raw/HIV_Diagnoses.csv&#39;</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="n">F</span><span class="p">)</span>

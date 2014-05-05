@@ -1845,7 +1845,7 @@ HIV Risk Analysis            </a>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[1]:
+In&nbsp;[9]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="o">%</span><span class="k">load_ext</span> <span class="n">rmagic</span>
@@ -1854,11 +1854,28 @@ In&nbsp;[1]:
 </div>
 </div>
 
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+The rmagic extension is already loaded. To reload it, use:
+  %reload_ext rmagic
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[4]:
+In&nbsp;[10]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="o">%%</span><span class="k">R</span>
@@ -1878,6 +1895,263 @@ In&nbsp;[4]:
 <span class="n">chlamydia</span> <span class="o">=</span> <span class="n">get_chlamydia_df</span><span class="p">()</span>
 <span class="n">gonorrhea</span> <span class="o">=</span> <span class="n">get_gonorrhea_df</span><span class="p">()</span>
 <span class="n">syphilis</span> <span class="o">=</span> <span class="n">get_syphilis_df</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Next, we'll filter the <code>Location</code> field so that we limit our analysis to the 50 US states. We'll also reindex the dataframe.</p>
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[11]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight-ipynb"><pre class="ipynb"><span class="o">%%</span><span class="k">R</span>
+<span class="n">states</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s">&#39;Alabama&#39;</span><span class="p">,</span> <span class="s">&#39;Alaska&#39;</span><span class="p">,</span> <span class="s">&#39;Arizona&#39;</span><span class="p">,</span> <span class="s">&#39;Arkansas&#39;</span><span class="p">,</span> <span class="s">&#39;California&#39;</span><span class="p">,</span> <span class="s">&#39;Colorado&#39;</span><span class="p">,</span> <span class="s">&#39;Connecticut&#39;</span><span class="p">,</span> <span class="s">&#39;Delaware&#39;</span><span class="p">,</span> <span class="s">&#39;Florida&#39;</span><span class="p">,</span> <span class="s">&#39;Georgia&#39;</span><span class="p">,</span> <span class="s">&#39;Hawaii&#39;</span><span class="p">,</span> <span class="s">&#39;Idaho&#39;</span><span class="p">,</span> <span class="s">&#39;Illinois&#39;</span><span class="p">,</span> <span class="s">&#39;Indiana&#39;</span><span class="p">,</span> <span class="s">&#39;Iowa&#39;</span><span class="p">,</span> <span class="s">&#39;Kansas&#39;</span><span class="p">,</span> <span class="s">&#39;Kentucky&#39;</span><span class="p">,</span> <span class="s">&#39;Louisiana&#39;</span><span class="p">,</span> <span class="s">&#39;Maine&#39;</span><span class="p">,</span> <span class="s">&#39;Maryland&#39;</span><span class="p">,</span> <span class="s">&#39;Massachusetts&#39;</span><span class="p">,</span> <span class="s">&#39;Michigan&#39;</span><span class="p">,</span> <span class="s">&#39;Minnesota&#39;</span><span class="p">,</span> <span class="s">&#39;Mississippi&#39;</span><span class="p">,</span> <span class="s">&#39;Missouri&#39;</span><span class="p">,</span> <span class="s">&#39;Montana&#39;</span><span class="p">,</span> <span class="s">&#39;Nebraska&#39;</span><span class="p">,</span> <span class="s">&#39;Nevada&#39;</span><span class="p">,</span> <span class="s">&#39;New Hampshire&#39;</span><span class="p">,</span> <span class="s">&#39;New Jersey&#39;</span><span class="p">,</span> <span class="s">&#39;New Mexico&#39;</span><span class="p">,</span> <span class="s">&#39;New York&#39;</span><span class="p">,</span> <span class="s">&#39;North Carolina&#39;</span><span class="p">,</span> <span class="s">&#39;North Dakota&#39;</span><span class="p">,</span> <span class="s">&#39;Ohio&#39;</span><span class="p">,</span> <span class="s">&#39;Oklahoma&#39;</span><span class="p">,</span> <span class="s">&#39;Oregon&#39;</span><span class="p">,</span> <span class="s">&#39;Pennsylvania&#39;</span><span class="p">,</span> <span class="s">&#39;Rhode Island&#39;</span><span class="p">,</span> <span class="s">&#39;South Carolina&#39;</span><span class="p">,</span> <span class="s">&#39;South Dakota&#39;</span><span class="p">,</span> <span class="s">&#39;Tennessee&#39;</span><span class="p">,</span> <span class="s">&#39;Texas&#39;</span><span class="p">,</span> <span class="s">&#39;Utah&#39;</span><span class="p">,</span> <span class="s">&#39;Vermont&#39;</span><span class="p">,</span> <span class="s">&#39;Virginia&#39;</span><span class="p">,</span> <span class="s">&#39;Washington&#39;</span><span class="p">,</span> <span class="s">&#39;West Virginia&#39;</span><span class="p">,</span> <span class="s">&#39;Wisconsin&#39;</span><span class="p">,</span> <span class="s">&#39;Wyoming&#39;</span><span class="p">)</span>
+<span class="n">hiv_diagnoses</span> <span class="o">=</span> <span class="n">hiv_diagnoses</span><span class="p">[</span><span class="n">hiv_diagnoses</span><span class="err">$</span><span class="n">Location</span> <span class="o">%</span><span class="k">in</span><span class="o">%</span> <span class="n">states</span><span class="p">,</span> <span class="p">]</span>
+<span class="n">row</span><span class="o">.</span><span class="n">names</span><span class="p">(</span><span class="n">hiv_diagnoses</span><span class="p">)</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span><span class="n">nrow</span><span class="p">(</span><span class="n">hiv_diagnoses</span><span class="p">)</span>
+<span class="n">citizenship_status</span> <span class="o">=</span> <span class="n">citizenship_status</span><span class="p">[</span><span class="n">citizenship_status</span><span class="err">$</span><span class="n">Location</span> <span class="o">%</span><span class="k">in</span><span class="o">%</span> <span class="n">states</span><span class="p">,</span> <span class="p">]</span>
+<span class="n">row</span><span class="o">.</span><span class="n">names</span><span class="p">(</span><span class="n">citizenship_status</span><span class="p">)</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span><span class="n">nrow</span><span class="p">(</span><span class="n">citizenship_status</span><span class="p">)</span>
+<span class="n">fpl</span> <span class="o">=</span> <span class="n">fpl</span><span class="p">[</span><span class="n">fpl</span><span class="err">$</span><span class="n">Location</span> <span class="o">%</span><span class="k">in</span><span class="o">%</span> <span class="n">states</span><span class="p">,</span> <span class="p">]</span>
+<span class="n">row</span><span class="o">.</span><span class="n">names</span><span class="p">(</span><span class="n">fpl</span><span class="p">)</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span><span class="n">nrow</span><span class="p">(</span><span class="n">fpl</span><span class="p">)</span>
+<span class="n">income</span> <span class="o">=</span> <span class="n">income</span><span class="p">[</span><span class="n">income</span><span class="err">$</span><span class="n">Location</span> <span class="o">%</span><span class="k">in</span><span class="o">%</span> <span class="n">states</span><span class="p">,</span> <span class="p">]</span>
+<span class="n">row</span><span class="o">.</span><span class="n">names</span><span class="p">(</span><span class="n">income</span><span class="p">)</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span><span class="n">nrow</span><span class="p">(</span><span class="n">income</span><span class="p">)</span>
+<span class="n">unemployment</span> <span class="o">=</span> <span class="n">unemployment</span><span class="p">[</span><span class="n">unemployment</span><span class="err">$</span><span class="n">Location</span> <span class="o">%</span><span class="k">in</span><span class="o">%</span> <span class="n">states</span><span class="p">,</span> <span class="p">]</span>
+<span class="n">row</span><span class="o">.</span><span class="n">names</span><span class="p">(</span><span class="n">unemployment</span><span class="p">)</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span><span class="n">nrow</span><span class="p">(</span><span class="n">unemployment</span><span class="p">)</span>
+<span class="n">insured</span> <span class="o">=</span> <span class="n">insured</span><span class="p">[</span><span class="n">insured</span><span class="err">$</span><span class="n">Location</span> <span class="o">%</span><span class="k">in</span><span class="o">%</span> <span class="n">states</span><span class="p">,</span> <span class="p">]</span>
+<span class="n">row</span><span class="o">.</span><span class="n">names</span><span class="p">(</span><span class="n">insured</span><span class="p">)</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span><span class="n">nrow</span><span class="p">(</span><span class="n">insured</span><span class="p">)</span>
+<span class="n">hospital</span> <span class="o">=</span> <span class="n">hospital</span><span class="p">[</span><span class="n">hospital</span><span class="err">$</span><span class="n">Location</span> <span class="o">%</span><span class="k">in</span><span class="o">%</span> <span class="n">states</span><span class="p">,</span> <span class="p">]</span>
+<span class="n">row</span><span class="o">.</span><span class="n">names</span><span class="p">(</span><span class="n">hospital</span><span class="p">)</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span><span class="n">nrow</span><span class="p">(</span><span class="n">hospital</span><span class="p">)</span>
+<span class="n">federal_funds</span> <span class="o">=</span> <span class="n">federal_funds</span><span class="p">[</span><span class="n">federal_funds</span><span class="err">$</span><span class="n">Location</span> <span class="o">%</span><span class="k">in</span><span class="o">%</span> <span class="n">states</span><span class="p">,</span> <span class="p">]</span>
+<span class="n">row</span><span class="o">.</span><span class="n">names</span><span class="p">(</span><span class="n">federal_funds</span><span class="p">)</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span><span class="n">nrow</span><span class="p">(</span><span class="n">federal_funds</span><span class="p">)</span>
+<span class="n">test_rate</span> <span class="o">=</span> <span class="n">test_rate</span><span class="p">[</span><span class="n">test_rate</span><span class="err">$</span><span class="n">Location</span> <span class="o">%</span><span class="k">in</span><span class="o">%</span> <span class="n">states</span><span class="p">,</span> <span class="p">]</span>
+<span class="n">row</span><span class="o">.</span><span class="n">names</span><span class="p">(</span><span class="n">test_rate</span><span class="p">)</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span><span class="n">nrow</span><span class="p">(</span><span class="n">test_rate</span><span class="p">)</span>
+<span class="n">sex_ed_6_9</span> <span class="o">=</span> <span class="n">sex_ed_6_9</span><span class="p">[</span><span class="n">sex_ed_6_9</span><span class="err">$</span><span class="n">Location</span> <span class="o">%</span><span class="k">in</span><span class="o">%</span> <span class="n">states</span><span class="p">,</span> <span class="p">]</span>
+<span class="n">row</span><span class="o">.</span><span class="n">names</span><span class="p">(</span><span class="n">sex_ed_6_9</span><span class="p">)</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span><span class="n">nrow</span><span class="p">(</span><span class="n">sex_ed_6_9</span><span class="p">)</span>
+<span class="n">sex_ed_9_12</span> <span class="o">=</span> <span class="n">sex_ed_9_12</span><span class="p">[</span><span class="n">sex_ed_9_12</span><span class="err">$</span><span class="n">Location</span> <span class="o">%</span><span class="k">in</span><span class="o">%</span> <span class="n">states</span><span class="p">,</span> <span class="p">]</span>
+<span class="n">row</span><span class="o">.</span><span class="n">names</span><span class="p">(</span><span class="n">sex_ed_9_12</span><span class="p">)</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span><span class="n">nrow</span><span class="p">(</span><span class="n">sex_ed_9_12</span><span class="p">)</span>
+<span class="n">chlamydia</span> <span class="o">=</span> <span class="n">chlamydia</span><span class="p">[</span><span class="n">chlamydia</span><span class="err">$</span><span class="n">Location</span> <span class="o">%</span><span class="k">in</span><span class="o">%</span> <span class="n">states</span><span class="p">,</span> <span class="p">]</span>
+<span class="n">row</span><span class="o">.</span><span class="n">names</span><span class="p">(</span><span class="n">chlamydia</span><span class="p">)</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span><span class="n">nrow</span><span class="p">(</span><span class="n">chlamydia</span><span class="p">)</span>
+<span class="n">gonorrhea</span> <span class="o">=</span> <span class="n">gonorrhea</span><span class="p">[</span><span class="n">gonorrhea</span><span class="err">$</span><span class="n">Location</span> <span class="o">%</span><span class="k">in</span><span class="o">%</span> <span class="n">states</span><span class="p">,</span> <span class="p">]</span>
+<span class="n">row</span><span class="o">.</span><span class="n">names</span><span class="p">(</span><span class="n">gonorrhea</span><span class="p">)</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span><span class="n">nrow</span><span class="p">(</span><span class="n">gonorrhea</span><span class="p">)</span>
+<span class="n">syphilis</span> <span class="o">=</span> <span class="n">syphilis</span><span class="p">[</span><span class="n">syphilis</span><span class="err">$</span><span class="n">Location</span> <span class="o">%</span><span class="k">in</span><span class="o">%</span> <span class="n">states</span><span class="p">,</span> <span class="p">]</span>
+<span class="n">row</span><span class="o">.</span><span class="n">names</span><span class="p">(</span><span class="n">syphilis</span><span class="p">)</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span><span class="n">nrow</span><span class="p">(</span><span class="n">syphilis</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Dealing-with-Missing-Values">Dealing with Missing Values<a class="anchor-link" href="#Dealing-with-Missing-Values">&#182;</a></h3>
+</div>
+
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We conformed data to <code>NA</code> in <code>citizenship_status</code> and added <code>NA</code> values for Wyoming, which was missing completely.</p>
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[12]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight-ipynb"><pre class="ipynb"><span class="o">%%</span><span class="k">R</span>
+<span class="n">citizenship_status</span><span class="p">[</span><span class="n">citizenship_status</span> <span class="o">==</span> <span class="s">&#39;NSD&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">NA</span>
+<span class="n">insured</span><span class="p">[</span><span class="n">insured</span> <span class="o">==</span> <span class="s">&#39;NSD&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">NA</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">nrow</span><span class="p">(</span><span class="n">citizenship_status</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">50</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">citizenship_status</span> <span class="o">=</span> <span class="n">rbind</span><span class="p">(</span><span class="n">citizenship_status</span><span class="p">,</span> <span class="n">c</span><span class="p">(</span><span class="s">&#39;Wyoming&#39;</span><span class="p">,</span> <span class="n">NA</span><span class="p">,</span> <span class="n">NA</span><span class="p">,</span> <span class="n">NA</span><span class="p">))</span>
+<span class="p">}</span>
+</pre></div>
+
+</div>
+</div>
+
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Normalizing-Data-Values">Normalizing Data Values<a class="anchor-link" href="#Normalizing-Data-Values">&#182;</a></h3>
+</div>
+
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>To make things easier later, we'll use state abbreviations rather than their full names.</p>
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[13]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight-ipynb"><pre class="ipynb"><span class="o">%%</span><span class="k">R</span>
+<span class="n">abbreviations</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s">&#39;AL&#39;</span><span class="p">,</span> <span class="s">&#39;AK&#39;</span><span class="p">,</span> <span class="s">&#39;AZ&#39;</span><span class="p">,</span> <span class="s">&#39;AR&#39;</span><span class="p">,</span> <span class="s">&#39;CA&#39;</span><span class="p">,</span> <span class="s">&#39;CO&#39;</span><span class="p">,</span> <span class="s">&#39;CT&#39;</span><span class="p">,</span> <span class="s">&#39;DE&#39;</span><span class="p">,</span> <span class="s">&#39;FL&#39;</span><span class="p">,</span> <span class="s">&#39;GA&#39;</span><span class="p">,</span> <span class="s">&#39;HI&#39;</span><span class="p">,</span> <span class="s">&#39;ID&#39;</span><span class="p">,</span> <span class="s">&#39;IL&#39;</span><span class="p">,</span> <span class="s">&#39;IN&#39;</span><span class="p">,</span> <span class="s">&#39;IA&#39;</span><span class="p">,</span> <span class="s">&#39;KS&#39;</span><span class="p">,</span> <span class="s">&#39;KY&#39;</span><span class="p">,</span> <span class="s">&#39;LA&#39;</span><span class="p">,</span> <span class="s">&#39;ME&#39;</span><span class="p">,</span> <span class="s">&#39;MD&#39;</span><span class="p">,</span> <span class="s">&#39;MA&#39;</span><span class="p">,</span> <span class="s">&#39;MI&#39;</span><span class="p">,</span> <span class="s">&#39;MN&#39;</span><span class="p">,</span> <span class="s">&#39;MS&#39;</span><span class="p">,</span> <span class="s">&#39;MO&#39;</span><span class="p">,</span> <span class="s">&#39;MT&#39;</span><span class="p">,</span> <span class="s">&#39;NE&#39;</span><span class="p">,</span> <span class="s">&#39;NV&#39;</span><span class="p">,</span> <span class="s">&#39;NH&#39;</span><span class="p">,</span> <span class="s">&#39;NJ&#39;</span><span class="p">,</span> <span class="s">&#39;NM&#39;</span><span class="p">,</span> <span class="s">&#39;NY&#39;</span><span class="p">,</span> <span class="s">&#39;NC&#39;</span><span class="p">,</span> <span class="s">&#39;ND&#39;</span><span class="p">,</span> <span class="s">&#39;OH&#39;</span><span class="p">,</span> <span class="s">&#39;OK&#39;</span><span class="p">,</span> <span class="s">&#39;OR&#39;</span><span class="p">,</span> <span class="s">&#39;PA&#39;</span><span class="p">,</span> <span class="s">&#39;RI&#39;</span><span class="p">,</span> <span class="s">&#39;SC&#39;</span><span class="p">,</span> <span class="s">&#39;SD&#39;</span><span class="p">,</span> <span class="s">&#39;TN&#39;</span><span class="p">,</span> <span class="s">&#39;TX&#39;</span><span class="p">,</span> <span class="s">&#39;UT&#39;</span><span class="p">,</span> <span class="s">&#39;VT&#39;</span><span class="p">,</span> <span class="s">&#39;VA&#39;</span><span class="p">,</span> <span class="s">&#39;WA&#39;</span><span class="p">,</span> <span class="s">&#39;WV&#39;</span><span class="p">,</span> <span class="s">&#39;WI&#39;</span><span class="p">,</span> <span class="s">&#39;WY&#39;</span><span class="p">)</span>
+<span class="n">hiv_diagnoses</span><span class="err">$</span><span class="n">Location</span> <span class="o">=</span> <span class="n">abbreviations</span>
+<span class="n">citizenship_status</span><span class="err">$</span><span class="n">Location</span> <span class="o">=</span> <span class="n">abbreviations</span>
+<span class="n">fpl</span><span class="err">$</span><span class="n">Location</span> <span class="o">=</span> <span class="n">abbreviations</span>
+<span class="n">income</span><span class="err">$</span><span class="n">Location</span> <span class="o">=</span> <span class="n">abbreviations</span>
+<span class="n">unemployment</span><span class="err">$</span><span class="n">Location</span> <span class="o">=</span> <span class="n">abbreviations</span>
+<span class="n">insured</span><span class="err">$</span><span class="n">Location</span> <span class="o">=</span> <span class="n">abbreviations</span>
+<span class="n">hospital</span><span class="err">$</span><span class="n">Location</span> <span class="o">=</span> <span class="n">abbreviations</span>
+<span class="n">federal_funds</span><span class="err">$</span><span class="n">Location</span> <span class="o">=</span> <span class="n">abbreviations</span>
+<span class="n">test_rate</span><span class="err">$</span><span class="n">Location</span> <span class="o">=</span> <span class="n">abbreviations</span>
+<span class="n">sex_ed_6_9</span><span class="err">$</span><span class="n">Location</span> <span class="o">=</span> <span class="n">abbreviations</span>
+<span class="n">sex_ed_9_12</span><span class="err">$</span><span class="n">Location</span> <span class="o">=</span> <span class="n">abbreviations</span>
+<span class="n">chlamydia</span><span class="err">$</span><span class="n">Location</span> <span class="o">=</span> <span class="n">abbreviations</span>
+<span class="n">gonorrhea</span><span class="err">$</span><span class="n">Location</span> <span class="o">=</span> <span class="n">abbreviations</span>
+<span class="n">syphilis</span><span class="err">$</span><span class="n">Location</span> <span class="o">=</span> <span class="n">abbreviations</span>
+</pre></div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[14]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight-ipynb"><pre class="ipynb"><span class="o">%%</span><span class="k">R</span>
+<span class="nb">file</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">c</span><span class="p">(</span><span class="s">&#39;./data/cleaned/HIV_Diagnoses.csv&#39;</span><span class="p">,</span> 
+              <span class="s">&#39;./data/cleaned/Citizenship_Status.csv&#39;</span><span class="p">,</span> 
+              <span class="s">&#39;./data/cleaned/fpl.csv&#39;</span><span class="p">,</span> 
+              <span class="s">&#39;./data/cleaned/Median_Annual_Income.csv&#39;</span><span class="p">,</span> 
+              <span class="s">&#39;./data/cleaned/unemployment_rate.csv&#39;</span><span class="p">,</span>
+              <span class="s">&#39;./data/cleaned/Has_Insurance.csv&#39;</span><span class="p">,</span>
+              <span class="s">&#39;./data/cleaned/Hospital_Owners.csv&#39;</span><span class="p">,</span>
+              <span class="s">&#39;./data/cleaned/Federal_Funds.csv&#39;</span><span class="p">,</span>
+              <span class="s">&#39;./data/cleaned/Test_Rate.csv&#39;</span><span class="p">,</span>
+              <span class="s">&#39;./data/cleaned/Sex_Ed_6_8.csv&#39;</span><span class="p">,</span>
+              <span class="s">&#39;./data/cleaned/Sex_Ed_9_12.csv&#39;</span><span class="p">,</span>
+              <span class="s">&#39;./data/cleaned/chlamydia_cases.csv&#39;</span><span class="p">,</span>
+              <span class="s">&#39;./data/cleaned/gonorrhea_cases.csv&#39;</span><span class="p">,</span>
+              <span class="s">&#39;./data/cleaned/syphilis_cases.csv&#39;</span><span class="p">))</span>
+<span class="n">write</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="n">hiv_diagnoses</span><span class="p">,</span> <span class="s">&#39;./data/cleaned/HIV_Diagnoses.csv&#39;</span><span class="p">,</span> <span class="n">row</span><span class="o">.</span><span class="n">names</span><span class="o">=</span><span class="n">F</span><span class="p">)</span>
+<span class="n">write</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="n">citizenship_status</span><span class="p">,</span> <span class="s">&#39;./data/cleaned/Citizenship_Status.csv&#39;</span><span class="p">,</span> <span class="n">row</span><span class="o">.</span><span class="n">names</span><span class="o">=</span><span class="n">F</span><span class="p">)</span>
+<span class="n">write</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="n">fpl</span><span class="p">,</span> <span class="s">&#39;./data/cleaned/fpl.csv&#39;</span><span class="p">,</span> <span class="n">row</span><span class="o">.</span><span class="n">names</span><span class="o">=</span><span class="n">F</span><span class="p">)</span>
+<span class="n">write</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="n">income</span><span class="p">,</span> <span class="s">&#39;./data/cleaned/Median_Annual_Income.csv&#39;</span><span class="p">,</span> <span class="n">row</span><span class="o">.</span><span class="n">names</span><span class="o">=</span><span class="n">F</span><span class="p">)</span>
+<span class="n">write</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="n">unemployment</span><span class="p">,</span> <span class="s">&#39;./data/cleaned/unemployment_rate.csv&#39;</span><span class="p">,</span> <span class="n">row</span><span class="o">.</span><span class="n">names</span><span class="o">=</span><span class="n">F</span><span class="p">)</span>
+<span class="n">write</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="n">insured</span><span class="p">,</span> <span class="s">&#39;./data/cleaned/Has_Insurance.csv&#39;</span><span class="p">,</span> <span class="n">row</span><span class="o">.</span><span class="n">names</span><span class="o">=</span><span class="n">F</span><span class="p">)</span>
+<span class="n">write</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="n">hospital</span><span class="p">,</span> <span class="s">&#39;./data/cleaned/Hospital_Owners.csv&#39;</span><span class="p">,</span> <span class="n">row</span><span class="o">.</span><span class="n">names</span><span class="o">=</span><span class="n">F</span><span class="p">)</span>
+<span class="n">write</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="n">federal_funds</span><span class="p">,</span> <span class="s">&#39;./data/cleaned/Federal_Funds.csv&#39;</span><span class="p">,</span> <span class="n">row</span><span class="o">.</span><span class="n">names</span><span class="o">=</span><span class="n">F</span><span class="p">)</span>
+<span class="n">write</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="n">test_rate</span><span class="p">,</span> <span class="s">&#39;./data/cleaned/Test_Rate.csv&#39;</span><span class="p">,</span> <span class="n">row</span><span class="o">.</span><span class="n">names</span><span class="o">=</span><span class="n">F</span><span class="p">)</span>
+<span class="n">write</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="n">sex_ed_6_9</span><span class="p">,</span> <span class="s">&#39;./data/cleaned/Sex_Ed_6_8.csv&#39;</span><span class="p">,</span> <span class="n">row</span><span class="o">.</span><span class="n">names</span><span class="o">=</span><span class="n">F</span><span class="p">)</span>
+<span class="n">write</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="n">sex_ed_9_12</span><span class="p">,</span> <span class="s">&#39;./data/cleaned/Sex_Ed_9_12.csv&#39;</span><span class="p">,</span> <span class="n">row</span><span class="o">.</span><span class="n">names</span><span class="o">=</span><span class="n">F</span><span class="p">)</span>
+<span class="n">write</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="n">chlamydia</span><span class="p">,</span> <span class="s">&#39;./data/cleaned/chlamydia_cases.csv&#39;</span><span class="p">,</span> <span class="n">row</span><span class="o">.</span><span class="n">names</span><span class="o">=</span><span class="n">F</span><span class="p">)</span>
+<span class="n">write</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="n">gonorrhea</span><span class="p">,</span> <span class="s">&#39;./data/cleaned/gonorrhea_cases.csv&#39;</span><span class="p">,</span> <span class="n">row</span><span class="o">.</span><span class="n">names</span><span class="o">=</span><span class="n">F</span><span class="p">)</span>
+<span class="n">write</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="n">syphilis</span><span class="p">,</span> <span class="s">&#39;./data/cleaned/syphilis_cases.csv&#39;</span><span class="p">,</span> <span class="n">row</span><span class="o">.</span><span class="n">names</span><span class="o">=</span><span class="n">F</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="A-Helper-Function-for-Future-Parts">A Helper Function for Future Parts<a class="anchor-link" href="#A-Helper-Function-for-Future-Parts">&#182;</a></h2>
+</div>
+
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Whenever possible, we'll try to keep things normalized to 1, since many of these fields are percentages. We'll also need to convert everything to a <code>numeric</code> type.</p>
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[21]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight-ipynb"><pre class="ipynb"><span class="o">%%</span><span class="k">file</span> <span class="o">./</span><span class="n">scripts</span><span class="o">/</span><span class="n">hiv_loader_clean</span><span class="o">.</span><span class="n">R</span>
+
+<span class="n">options</span><span class="p">(</span><span class="n">stringsAsFactors</span><span class="o">=</span><span class="n">FALSE</span><span class="p">)</span>
+<span class="n">get_all_data</span> <span class="o">=</span> <span class="n">function</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="n">all_data</span> <span class="o">=</span> <span class="n">matrix</span><span class="p">()</span>
+    
+    <span class="n">hiv_diagnoses</span>      <span class="o">=</span> <span class="n">read</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="s">&#39;./data/cleaned/HIV_Diagnoses.csv&#39;</span><span class="p">)</span>
+    <span class="n">citizenship_status</span> <span class="o">=</span> <span class="n">read</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="s">&#39;./data/cleaned/Citizenship_Status.csv&#39;</span><span class="p">)</span>
+    <span class="n">fpl</span>                <span class="o">=</span> <span class="n">read</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="s">&#39;./data/cleaned/fpl.csv&#39;</span><span class="p">)</span>
+    <span class="n">income</span>             <span class="o">=</span> <span class="n">read</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="s">&#39;./data/cleaned/Median_Annual_Income.csv&#39;</span><span class="p">)</span>
+    <span class="n">unemployment</span>       <span class="o">=</span> <span class="n">read</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="s">&#39;./data/cleaned/unemployment_rate.csv&#39;</span><span class="p">)</span>
+    <span class="n">insured</span>            <span class="o">=</span> <span class="n">read</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="s">&#39;./data/cleaned/Has_Insurance.csv&#39;</span><span class="p">)</span>
+    <span class="n">hospital</span>           <span class="o">=</span> <span class="n">read</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="s">&#39;./data/cleaned/Hospital_Owners.csv&#39;</span><span class="p">)</span>
+    <span class="n">federal_funds</span>      <span class="o">=</span> <span class="n">read</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="s">&#39;./data/cleaned/Federal_Funds.csv&#39;</span><span class="p">)</span>
+    <span class="n">test_rate</span>          <span class="o">=</span> <span class="n">read</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="s">&#39;./data/cleaned/Test_Rate.csv&#39;</span><span class="p">)</span>
+    <span class="n">sex_ed_6_9</span>         <span class="o">=</span> <span class="n">read</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="s">&#39;./data/cleaned/Sex_Ed_6_8.csv&#39;</span><span class="p">)</span>
+    <span class="n">sex_ed_9_12</span>        <span class="o">=</span> <span class="n">read</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="s">&#39;./data/cleaned/Sex_Ed_9_12.csv&#39;</span><span class="p">)</span>
+    <span class="n">chlamydia</span>          <span class="o">=</span> <span class="n">read</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="s">&#39;./data/cleaned/chlamydia_cases.csv&#39;</span><span class="p">)</span>
+    <span class="n">gonorrhea</span>          <span class="o">=</span> <span class="n">read</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="s">&#39;./data/cleaned/gonorrhea_cases.csv&#39;</span><span class="p">)</span>
+    <span class="n">syphilis</span>           <span class="o">=</span> <span class="n">read</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="s">&#39;./data/cleaned/syphilis_cases.csv&#39;</span><span class="p">)</span>
+
+    <span class="n">hiv_diagnoses</span><span class="p">[,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">sapply</span><span class="p">(</span><span class="n">hiv_diagnoses</span><span class="p">[,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="k">as</span><span class="o">.</span><span class="n">numeric</span><span class="p">)</span>
+    <span class="n">citizenship_status</span><span class="p">[,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">sapply</span><span class="p">(</span><span class="n">citizenship_status</span><span class="p">[,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="k">as</span><span class="o">.</span><span class="n">numeric</span><span class="p">)</span>
+    <span class="n">fpl</span><span class="p">[,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">sapply</span><span class="p">(</span><span class="n">fpl</span><span class="p">[,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="k">as</span><span class="o">.</span><span class="n">numeric</span><span class="p">)</span>
+    <span class="n">income</span><span class="p">[,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">sapply</span><span class="p">(</span><span class="n">income</span><span class="p">[,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="k">as</span><span class="o">.</span><span class="n">numeric</span><span class="p">)</span>
+    <span class="n">unemployment</span><span class="p">[,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">sapply</span><span class="p">(</span><span class="n">unemployment</span><span class="p">[,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="k">as</span><span class="o">.</span><span class="n">numeric</span><span class="p">)</span>
+    <span class="n">insured</span><span class="p">[,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">sapply</span><span class="p">(</span><span class="n">insured</span><span class="p">[,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="k">as</span><span class="o">.</span><span class="n">numeric</span><span class="p">)</span>
+    <span class="n">hospital</span><span class="p">[,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">sapply</span><span class="p">(</span><span class="n">hospital</span><span class="p">[,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="k">as</span><span class="o">.</span><span class="n">numeric</span><span class="p">)</span>
+    <span class="n">federal_funds</span><span class="p">[,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">sapply</span><span class="p">(</span><span class="n">federal_funds</span><span class="p">[,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="k">as</span><span class="o">.</span><span class="n">numeric</span><span class="p">)</span>
+    <span class="n">test_rate</span><span class="p">[,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">sapply</span><span class="p">(</span><span class="n">test_rate</span><span class="p">[,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="k">as</span><span class="o">.</span><span class="n">numeric</span><span class="p">)</span>
+    <span class="n">sex_ed_6_9</span><span class="p">[,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">sapply</span><span class="p">(</span><span class="n">sex_ed_6_9</span><span class="p">[,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="k">as</span><span class="o">.</span><span class="n">numeric</span><span class="p">)</span>
+    <span class="n">sex_ed_9_12</span><span class="p">[,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">sapply</span><span class="p">(</span><span class="n">sex_ed_9_12</span><span class="p">[,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="k">as</span><span class="o">.</span><span class="n">numeric</span><span class="p">)</span>
+    <span class="n">chlamydia</span><span class="p">[,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">sapply</span><span class="p">(</span><span class="n">chlamydia</span><span class="p">[,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="k">as</span><span class="o">.</span><span class="n">numeric</span><span class="p">)</span>
+    <span class="n">gonorrhea</span><span class="p">[,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">sapply</span><span class="p">(</span><span class="n">gonorrhea</span><span class="p">[,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="k">as</span><span class="o">.</span><span class="n">numeric</span><span class="p">)</span>
+    <span class="n">syphilis</span><span class="p">[,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">sapply</span><span class="p">(</span><span class="n">syphilis</span><span class="p">[,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="k">as</span><span class="o">.</span><span class="n">numeric</span><span class="p">)</span>
+
+    <span class="c"># Percentages are probably much more useful here than raw numbers</span>
+    <span class="n">hospital</span><span class="p">[,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">hospital</span><span class="p">[,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="mi">100</span>
+    <span class="n">sex_ed_6_9</span><span class="p">[,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">sex_ed_6_9</span><span class="p">[,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="mi">100</span>
+    <span class="n">sex_ed_9_12</span><span class="p">[,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">sex_ed_9_12</span><span class="p">[,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="mi">100</span>
+    <span class="n">federal_funds</span><span class="p">[,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">federal_funds</span><span class="p">[,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="mi">100000000</span>
+    
+    <span class="n">all_data</span><span class="err">$</span><span class="n">hiv_diagnoses</span> <span class="o">=</span> <span class="n">hiv_diagnoses</span>
+    <span class="n">all_data</span><span class="err">$</span><span class="n">citizenship_status</span> <span class="o">=</span> <span class="n">citizenship_status</span>
+    <span class="n">all_data</span><span class="err">$</span><span class="n">fpl</span> <span class="o">=</span> <span class="n">fpl</span>
+    <span class="n">all_data</span><span class="err">$</span><span class="n">income</span> <span class="o">=</span> <span class="n">income</span>
+    <span class="n">all_data</span><span class="err">$</span><span class="n">unemployment</span> <span class="o">=</span> <span class="n">unemployment</span>
+    <span class="n">all_data</span><span class="err">$</span><span class="n">insured</span> <span class="o">=</span> <span class="n">insured</span>
+    <span class="n">all_data</span><span class="err">$</span><span class="n">hospital</span> <span class="o">=</span> <span class="n">hospital</span>
+    <span class="n">all_data</span><span class="err">$</span><span class="n">federal_funds</span> <span class="o">=</span> <span class="n">federal_funds</span>
+    <span class="n">all_data</span><span class="err">$</span><span class="n">test_rate</span> <span class="o">=</span> <span class="n">test_rate</span>
+    <span class="n">all_data</span><span class="err">$</span><span class="n">sex_ed_6_9</span> <span class="o">=</span> <span class="n">sex_ed_6_9</span>
+    <span class="n">all_data</span><span class="err">$</span><span class="n">sex_ed_9_12</span> <span class="o">=</span> <span class="n">sex_ed_9_12</span>
+    <span class="n">all_data</span><span class="err">$</span><span class="n">chlamydia</span> <span class="o">=</span> <span class="n">chlamydia</span>
+    <span class="n">all_data</span><span class="err">$</span><span class="n">gonorrhea</span> <span class="o">=</span> <span class="n">gonorrhea</span>
+    <span class="n">all_data</span><span class="err">$</span><span class="n">syphilis</span> <span class="o">=</span> <span class="n">syphilis</span>
+
+    <span class="k">print</span><span class="p">(</span><span class="s">&#39;Loaded: hiv_diagnoses, citizenship_status, fpl, income, unemployment, insured, hospital, federal_funds, test_rate, sex_ed_6_9, sex_ed_9_12, chlamydia, gonorrhea, syphilis&#39;</span><span class="p">)</span>
+
+    <span class="k">return</span><span class="p">(</span><span class="n">all_data</span><span class="p">)</span>
+
+<span class="p">}</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+Overwriting ./scripts/hiv_loader_clean.R
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight-ipynb"><pre class="ipynb">
 </pre></div>
 
 </div>
